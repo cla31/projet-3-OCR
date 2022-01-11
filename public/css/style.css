@@ -151,6 +151,7 @@ footer {
 .sidebar__logo h1 {
   margin: 8px;
 }
+
 @media screen and (min-width: 992px) {
   footer {
     display: flex;
@@ -378,7 +379,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffee00;
+  background-color: #e4195c;
 }
 .cards__body {
   background-color: orchid;

@@ -1,0 +1,38 @@
+// **********************************************
+// partie fonctionnement: placement et style  chiffre + titre + icone
+@mixin icon-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+@mixin title-icon-position {
+    position: relative;
+    width: 216px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    border: royalblue 1px solid;
+}
+
+@mixin style-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: teal 2px solid;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 205px;
+}
+
+// ******************************************************
+@mixin items-responsive {
+    @media screen and (min-width: 992px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

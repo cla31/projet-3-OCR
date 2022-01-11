@@ -29,7 +29,9 @@
         background-color: $hover-item;
     }
     // version desktop
-    // @media screen and (min-width: 992px) {}
+    @media screen and (min-width: 992px) {
+        width: 270px;
+    }
 }
 
 @mixin style-number {
@@ -44,6 +46,13 @@
     height: 22px;
     right: 205px;
     border-radius: 12px;
+    // version desktop
+    @media screen and (min-width: 992px) {
+        right: 265px;
+        font-size: 18px;
+        width: 25px;
+        height: 25px;
+    }
 }
 
 // ******************************************************

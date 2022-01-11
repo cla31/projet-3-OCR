@@ -105,6 +105,11 @@ footer {
 .tabs__items {
   font-size: 12px;
 }
+@media screen and (min-width: 992px) {
+  .tabs__items {
+    font-size: 16px;
+  }
+}
 
 .cards {
   font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
@@ -279,6 +284,9 @@ footer {
     align-items: center;
   }
 }
+.tabs__box {
+  border: black 2px solid;
+}
 .tabs__items {
   padding-left: 18px;
 }
@@ -314,6 +322,11 @@ footer {
   transform: scale(1.1);
   background-color: #f5edff;
 }
+@media screen and (min-width: 992px) {
+  .tabs__choice {
+    width: 270px;
+  }
+}
 .tabs__un {
   display: flex;
   justify-content: center;
@@ -325,6 +338,14 @@ footer {
   height: 22px;
   right: 205px;
   border-radius: 12px;
+}
+@media screen and (min-width: 992px) {
+  .tabs__un {
+    right: 265px;
+    font-size: 18px;
+    width: 25px;
+    height: 25px;
+  }
 }
 .tabs__icon-mobile {
   display: flex;
@@ -354,6 +375,11 @@ footer {
   transform: scale(1.1);
   background-color: #f5edff;
 }
+@media screen and (min-width: 992px) {
+  .tabs__compose {
+    width: 270px;
+  }
+}
 .tabs__deux {
   display: flex;
   justify-content: center;
@@ -365,6 +391,14 @@ footer {
   height: 22px;
   right: 205px;
   border-radius: 12px;
+}
+@media screen and (min-width: 992px) {
+  .tabs__deux {
+    right: 265px;
+    font-size: 18px;
+    width: 25px;
+    height: 25px;
+  }
 }
 .tabs__icon-list {
   display: flex;
@@ -392,6 +426,11 @@ footer {
   transform: scale(1.1);
   background-color: #f5edff;
 }
+@media screen and (min-width: 992px) {
+  .tabs__enjoy {
+    width: 270px;
+  }
+}
 .tabs__trois {
   display: flex;
   justify-content: center;
@@ -403,6 +442,14 @@ footer {
   height: 22px;
   right: 205px;
   border-radius: 12px;
+}
+@media screen and (min-width: 992px) {
+  .tabs__trois {
+    right: 265px;
+    font-size: 18px;
+    width: 25px;
+    height: 25px;
+  }
 }
 .tabs__icon-store {
   display: flex;

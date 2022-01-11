@@ -77,6 +77,10 @@
     font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
     &__items {
         font-size: 12px;
+        // version desktop
+        @media screen and (min-width: 992px) {
+            font-size: 16px;
+        }
     }
 }
 

@@ -64,6 +64,10 @@
             align-items: center;
         }
     }
+    &__box {
+        border: black 2px solid;
+        // width: 30%;
+    }
     &__items {
         // font-size: 12px;
         padding-left: 18px;

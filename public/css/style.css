@@ -151,6 +151,7 @@ footer {
 .sidebar__logo h1 {
   margin: 8px;
 }
+
 @media screen and (min-width: 992px) {
   footer {
     display: flex;

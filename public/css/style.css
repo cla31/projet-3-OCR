@@ -151,9 +151,6 @@ footer {
 .sidebar__logo {
   background-color: white;
 }
-.sidebar__logo h1 {
-  margin: 8px;
-}
 
 @media screen and (min-width: 992px) {
   footer {
@@ -495,6 +492,10 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.cards__row2 a {
+  text-decoration: none;
+  color: black;
+}
 @media screen and (min-width: 992px) {
   .cards__row2 {
     flex-direction: row;
@@ -629,26 +630,65 @@ footer {
   background-color: #f6f6f6;
   background-size: cover;
   overflow: hidden;
-  height: 320px;
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .hero-page__img {
-    height: 400px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .hero-page__img {
-    height: 50vh;
-  }
-}
-.hero-page__img img {
+.hero-page__img .img {
   width: 100%;
-  transform: translate(0px, -50px);
   object-fit: cover;
 }
+.hero-page__img .img--note {
+  height: 260px;
+  object-position: center center;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .hero-page__img .img--note {
+    height: 300px;
+  }
+}
 @media screen and (min-width: 992px) {
-  .hero-page__img img {
-    transform: translate(0%, -40%);
+  .hero-page__img .img--note {
+    height: 600px;
+  }
+}
+.hero-page__img .img--palette {
+  height: 260px;
+  object-position: center center;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .hero-page__img .img--palette {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero-page__img .img--palette {
+    height: 600px;
+  }
+}
+.hero-page__img .img--french {
+  height: 260px;
+  object-position: center center;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .hero-page__img .img--french {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero-page__img .img--french {
+    height: 600px;
+  }
+}
+.hero-page__img .img--sens {
+  height: 250px;
+  object-position: center bottom;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .hero-page__img .img--sens {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero-page__img .img--sens {
+    height: 600px;
   }
 }
 
@@ -664,13 +704,25 @@ footer {
   width: 100%;
   background-color: #f6f6f6;
   position: relative;
-  top: -40px;
+  object-position: 50% 50%;
   border-radius: 40px 40px 0 0;
 }
 @media screen and (min-width: 992px) {
   .position-stack {
     height: 400px;
   }
+}
+.position-stack--palette {
+  top: -35px;
+}
+.position-stack--note {
+  top: -40px;
+}
+.position-stack--french {
+  top: -30px;
+}
+.position-stack--sens {
+  top: -35px;
 }
 
 .stack {

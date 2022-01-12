@@ -65,30 +65,69 @@
         background-color: $color-secondary;
         background-size: cover;
         overflow: hidden;
-        height: 320px;
-        // version tablette
-        @media screen and (min-width: 768px) and (max-width: 992px) {
-            height: 400px;
-        }
-        // version desktop 
-        @media screen and (min-width: 992px) {
-            // height: 700px;
-            height: 50vh;
-        }
-        img {
+        .img {
             width: 100%;
-            transform: translate(0px, -50px);
             object-fit: cover;
-            // version desktop 
-            @media screen and (min-width: 992px) {
-                transform: translate(0%, -40%);
+            &--note {
+                height: 260px;
+                object-position: center center;
+                // version tablette
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    height: 300px;
+                }
+                //version desktop 
+                @media screen and (min-width: 992px) {
+                    height: 600px;
+                }
+                // transform: translate(0px, -50px);
+                // object-fit: cover;
+                // // version desktop 
+                // @media screen and (min-width: 992px) {
+                //     transform: translate(0%, -40%);
+                // }
+            }
+            &--palette {
+                height: 260px;
+                object-position: center center;
+                // version tablette
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    height: 300px;
+                }
+                //version desktop 
+                @media screen and (min-width: 992px) {
+                    height: 600px;
+                }
+            }
+            &--french {
+                height: 260px;
+                object-position: center center;
+                // version tablette
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    height: 300px;
+                }
+                //version desktop 
+                @media screen and (min-width: 992px) {
+                    height: 600px;
+                }
+            }
+            &--sens {
+                height: 250px;
+                object-position: center bottom;
+                // version tablette
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    height: 300px;
+                }
+                //version desktop 
+                @media screen and (min-width: 992px) {
+                    height: 600px;
+                }
             }
         }
     }
 }
 
 .container-stack {
-    // background-color: hotpink;
+    // background-color: rgb(173, 156, 165);
     background-color: $color-secondary;
 }
 
@@ -101,12 +140,25 @@
     // background-color: hotpink;
     background-color: $color-secondary;
     position: relative;
-    top: -40px;
+    // top: -190px;
+    object-position: 50% 50%;
     border-radius: 40px 40px 0 0;
     // version desktop 
     @media screen and (min-width: 992px) {
         // background-size: cover;
         height: 400px;
+    }
+    &--palette {
+        top: -35px;
+    }
+    &--note {
+        top: -40px;
+    }
+    &--french {
+        top: -30px;
+    }
+    &--sens {
+        top: -35px;
     }
 }
 

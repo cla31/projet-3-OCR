@@ -61,33 +61,42 @@
     &__img {
         width: 100%;
         max-width: 2000px;
-        background-color: mediumorchid;
+        // background-color: mediumorchid;
+        background-color: $color-secondary;
         background-size: cover;
         overflow: hidden;
-        height: 320px;
-        // version tablette
-        @media screen and (min-width: 768px) and (max-width: 992px) {
-            height: 400px;
-        }
-        // version desktop 
-        @media screen and (min-width: 992px) {
-            // height: 700px;
-            height: 50vh;
-        }
-        img {
+        .img {
             width: 100%;
-            transform: translate(0px, -50px);
             object-fit: cover;
-            // version desktop 
+            height: 260px;
+            object-position: center center;
+            // version tablette
+            @media screen and (min-width: 768px) and (max-width: 992px) {
+                height: 300px;
+            }
+            //version desktop 
             @media screen and (min-width: 992px) {
-                transform: translate(0%, -40%);
+                height: 600px;
+            }
+            &--sens {
+                height: 250px;
+                object-position: center bottom;
+                // version tablette
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    height: 300px;
+                }
+                //version desktop 
+                @media screen and (min-width: 992px) {
+                    height: 600px;
+                }
             }
         }
     }
 }
 
 .container-stack {
-    background-color: hotpink;
+    // background-color: rgb(173, 156, 165);
+    background-color: $color-secondary;
 }
 
 .position-stack {
@@ -96,14 +105,28 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    background-color: hotpink;
+    // background-color: hotpink;
+    background-color: $color-secondary;
     position: relative;
-    top: -40px;
+    // top: -190px;
+    object-position: 50% 50%;
     border-radius: 40px 40px 0 0;
     // version desktop 
     @media screen and (min-width: 992px) {
         // background-size: cover;
         height: 400px;
+    }
+    &--palette {
+        top: -35px;
+    }
+    &--note {
+        top: -40px;
+    }
+    &--french {
+        top: -30px;
+    }
+    &--sens {
+        top: -35px;
     }
 }
 
@@ -159,17 +182,17 @@
     // border: black 1px solid;
     padding-left: 10px;
     &__title h4 {
-        border-bottom: lawngreen solid 2px;
+        border-bottom: $info solid 2px;
     }
     &__items {
         width: 98%;
-        border: red 2px solid;
+        // border: red 2px solid;
         margin-bottom: 20px;
     }
     &__description {
         display: flex;
         justify-content: space-between;
-        border: lightslategray 2px solid;
+        // border: lightslategray 2px solid;
     }
     // version tablette
     @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -200,7 +223,8 @@
 
 .position-button-page {
     width: 100%;
-    background-color: hotpink;
+    // background-color: hotpink;
+    background-color: $color-secondary;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -209,7 +233,12 @@
     &__button-page {
         width: 50%;
         text-align: center;
-        border: mediumorchid 2px solid;
+        // border: mediumorchid 2px solid;
+        background-color: $button;
+        border-radius: 24px;
+        background: linear-gradient(8deg, #8f53db 0%, #e371da 100%, #000 100%);
+        box-shadow: 5px 5px 5px 0px $shadow;
+        color: white;
         &:hover {
             cursor: pointer;
             transform: scale(1.1);

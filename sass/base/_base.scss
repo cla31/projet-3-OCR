@@ -9,21 +9,33 @@
     justify-content: center;
     max-width: 2000px;
     min-width: 200px;
-    border: black 3px solid;
+    // border: black 3px solid;
     margin: auto;
+    // version desktop 
+    // @media screen and (min-width: 992px) {
+    //     height: 1700px;
+    // }
+    // &--page {
+    //     // version desktop 
+    //     @media screen and (min-width: 992px) {
+    //         height: 100vh;
+    //     }
+    // }
 }
 
 header {
-    background-color: rgb(128, 128, 221);
+    // background-color: rgb(128, 128, 221);
     width: 100%;
 }
 
 main {
-    background-color: pink;
+    // background-color: pink;
     width: 100%;
 }
 
 footer {
-    background-color: purple;
+    // background-color: purple;
+    background-color: $footer;
+    color: $color-primary;
     width: 100%;
 }

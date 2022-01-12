@@ -1,10 +1,15 @@
 .baseline {
     justify-content: center;
     width: 100%;
+    // width: 50%;
     display: flex;
     align-items: center;
     // border: black solid 1px;
-    background-color: rgb(65, 13, 163);
+    // background-color: rgb(65, 13, 163);
+    // background-color: $baseline;
+    // background: linear-gradient(180deg, #e2e0e0 0%, #fff 90%);
+    background: linear-gradient(rgb(151, 150, 150), $baseline, $baseline, $baseline, $baseline, $baseline, $baseline);
+    // background: linear-gradient(rgb(151, 150, 150)repeat(4, $baseline));
     &__icon {
         display: flex;
         justify-content: center;
@@ -13,19 +18,26 @@
     }
     &__title {
         padding-left: 10px;
+        input {
+            width: 150px;
+            border: none;
+            background: linear-gradient(rgb(151, 150, 150), $baseline, $baseline, $baseline, $baseline, $baseline, $baseline);
+            // text-align: center;
+        }
     }
 }
 
 .hero {
-    background-color: grey;
+    // background-color: grey;
     &__stack {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-bottom: 50px;
         text-align: center;
-        border: black solid 1px;
-        background-color: plum;
+        // border: black solid 1px;
+        // background-color: plum;
+        background-color: $color-secondary;
         // version desktop 
         @media screen and (min-width: 992px) {
             padding-top: 30px;
@@ -33,7 +45,11 @@
     }
     &__button {
         width: 200px;
-        border: black solid 1px;
+        background-color: $button;
+        border-radius: 24px;
+        background: linear-gradient(8deg, #8f53db 0%, #e371da 100%, #000 100%);
+        box-shadow: 5px 5px 5px 0px $shadow;
+        // border: black solid 1px;
         &:hover {
             cursor: pointer;
             transform: scale(1.1);
@@ -55,9 +71,17 @@
             align-items: center;
         }
     }
+    &__box {
+        border: black 2px solid;
+        // width: 30%;
+    }
     &__items {
         // font-size: 12px;
         padding-left: 18px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
         // version desktop
         @include items-responsive;
         @media screen and (min-width: 992px) {
@@ -67,6 +91,11 @@
     &__choice {
         @include title-icon-position;
     }
+    // &__icon-mobile {
+    //     &:hover {
+    //         color: $item
+    //     }
+    // }
     &__un {
         @include style-number;
     }
@@ -100,9 +129,11 @@
     align-items: center;
     justify-content: center;
     // background-color: rgb(255, 238, 0);
-    background-color: rgb(228, 25, 92);
+    // background-color: rgb(228, 25, 92);
+    background-color: $color-secondary;
     &__body {
-        background-color: orchid;
+        // background-color: rgb(187, 161, 186);
+        background-color: $color-secondary;
         min-width: 90%;
         padding-bottom: 50px;
     }
@@ -126,6 +157,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        // version desktop 
         @media screen and (min-width: 992px) {
             flex-direction: row;
         }
@@ -135,10 +171,12 @@
 .card {
     position: relative;
     width: 290px;
-    background-color: thistle;
-    border: blue 2px solid;
+    background-color: $color-primary;
+    // border: blue 2px solid;
     margin-bottom: 10px;
     margin-top: 10px;
+    border-radius: 24px;
+    box-shadow: 5px 5px 5px 0px $shadow;
     // version tablette
     @media screen and (min-width: 768px) and (max-width: 992px) {
         width: 400px;
@@ -160,18 +198,20 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            border-radius: 24px 24px 0 0;
         }
         &--new {
             position: relative;
-            background-color: blue;
+            // background-color: blue;
         }
         &--text-new {
             position: absolute;
             top: 10px;
             right: 10px;
             padding: 6px 6px 6px 6px;
-            color: navy;
-            background-color: greenyellow;
+            // color: navy;
+            color: $info-text;
+            background-color: $info;
         }
     }
     &__body {

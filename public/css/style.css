@@ -634,46 +634,16 @@ footer {
 .hero-page__img .img {
   width: 100%;
   object-fit: cover;
-}
-.hero-page__img .img--note {
   height: 260px;
   object-position: center center;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .hero-page__img .img--note {
+  .hero-page__img .img {
     height: 300px;
   }
 }
 @media screen and (min-width: 992px) {
-  .hero-page__img .img--note {
-    height: 600px;
-  }
-}
-.hero-page__img .img--palette {
-  height: 260px;
-  object-position: center center;
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .hero-page__img .img--palette {
-    height: 300px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .hero-page__img .img--palette {
-    height: 600px;
-  }
-}
-.hero-page__img .img--french {
-  height: 260px;
-  object-position: center center;
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .hero-page__img .img--french {
-    height: 300px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .hero-page__img .img--french {
+  .hero-page__img .img {
     height: 600px;
   }
 }

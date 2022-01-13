@@ -70,3 +70,10 @@ footer {
         padding-right: 15px;
     }
 }
+
+.link {
+    &--contact a {
+        text-decoration: none;
+        color: white;
+    }
+}

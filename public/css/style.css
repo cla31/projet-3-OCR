@@ -223,6 +223,11 @@ footer {
   padding-right: 15px;
 }
 
+.link--contact a {
+  text-decoration: none;
+  color: white;
+}
+
 .baseline {
   justify-content: center;
   width: 100%;
@@ -236,13 +241,18 @@ footer {
   align-items: center;
   padding-bottom: 4px;
 }
-.baseline__title {
-  padding-left: 10px;
-}
 .baseline__title input {
   width: 150px;
   border: none;
   background: linear-gradient(#979696, #eaeaea, #eaeaea, #eaeaea, #eaeaea, #eaeaea, #eaeaea);
+  text-align: center;
+}
+.baseline__title input:hover {
+  border: rgba(163, 161, 161, 0.5) solid 2px;
+  border-radius: 10px;
+}
+.baseline__title input:focus {
+  outline: none;
 }
 
 .hero__stack {

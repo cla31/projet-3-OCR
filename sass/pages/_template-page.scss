@@ -62,7 +62,7 @@
         width: 100%;
         max-width: 2000px;
         // background-color: mediumorchid;
-        background-color: $color-secondary;
+        background-color: $background-bloc;
         background-size: cover;
         overflow: hidden;
         .img {
@@ -96,7 +96,7 @@
 
 .container-stack {
     // background-color: rgb(173, 156, 165);
-    background-color: $color-secondary;
+    background-color: $background-bloc;
 }
 
 .position-stack {
@@ -106,7 +106,7 @@
     flex-direction: column;
     width: 100%;
     // background-color: hotpink;
-    background-color: $color-secondary;
+    background-color: $background-bloc;
     position: relative;
     // top: -190px;
     object-position: 50% 50%;
@@ -182,7 +182,7 @@
     // border: black 1px solid;
     padding-left: 10px;
     &__title h4 {
-        border-bottom: $info solid 2px;
+        border-bottom: $tertiaire solid 2px;
     }
     &__items {
         width: 98%;
@@ -224,7 +224,7 @@
 .position-button-page {
     width: 100%;
     // background-color: hotpink;
-    background-color: $color-secondary;
+    background-color: $background-bloc;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -234,9 +234,9 @@
         width: 50%;
         text-align: center;
         // border: mediumorchid 2px solid;
-        background-color: $button;
+        background-color: $secondaire;
         border-radius: 24px;
-        background: linear-gradient(8deg, #8f53db 0%, #e371da 100%, #000 100%);
+        background: linear-gradient(8deg, $primaire 0%, $secondaire 100%, #000 100%);
         box-shadow: 5px 5px 5px 0px $shadow;
         color: white;
         &:hover {

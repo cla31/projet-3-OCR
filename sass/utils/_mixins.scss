@@ -5,9 +5,9 @@
     justify-content: center;
     align-items: center;
     padding-right: 15px;
-    color: $color-icon;
+    color: $secondary-font;
     &:hover {
-        color: $item;
+        color: $primaire;
     }
 }
 
@@ -18,7 +18,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-left: 20px;
-    background-color: $color-secondary;
+    background-color: $background-bloc;
     border-radius: 10px;
     // box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 5px 5px 5px 0px $shadow;
@@ -38,8 +38,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $item;
-    color: $color-primary;
+    background-color: $primaire;
+    color: $background-page;
     // border: teal 2px solid;
     position: absolute;
     width: 22px;

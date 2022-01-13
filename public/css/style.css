@@ -270,9 +270,9 @@ footer {
 }
 .hero__button {
   width: 200px;
-  background-color: #e371da;
+  background-color: #FF79DA;
   border-radius: 24px;
-  background: linear-gradient(8deg, #8f53db 0%, #e371da 100%, #000 100%);
+  background: linear-gradient(8deg, #9356DC 0%, #FF79DA 100%, #000 100%);
   box-shadow: 5px 5px 5px 0px #e9e9e9;
 }
 .hero__button:hover {
@@ -343,7 +343,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #9053db;
+  background-color: #9356DC;
   color: white;
   position: absolute;
   width: 22px;
@@ -367,7 +367,7 @@ footer {
   color: #7c7c7c;
 }
 .tabs__icon-mobile:hover {
-  color: #9053db;
+  color: #9356DC;
 }
 .tabs__compose {
   position: relative;
@@ -396,7 +396,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #9053db;
+  background-color: #9356DC;
   color: white;
   position: absolute;
   width: 22px;
@@ -420,7 +420,7 @@ footer {
   color: #7c7c7c;
 }
 .tabs__icon-list:hover {
-  color: #9053db;
+  color: #9356DC;
 }
 .tabs__enjoy {
   position: relative;
@@ -447,7 +447,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #9053db;
+  background-color: #9356DC;
   color: white;
   position: absolute;
   width: 22px;
@@ -471,7 +471,7 @@ footer {
   color: #7c7c7c;
 }
 .tabs__icon-store:hover {
-  color: #9053db;
+  color: #9356DC;
 }
 
 .cards {
@@ -559,7 +559,7 @@ footer {
   right: 10px;
   padding: 6px 6px 6px 6px;
   color: #07825e;
-  background-color: #9de2d0;
+  background-color: #99E2D0;
 }
 .card__body {
   display: grid;
@@ -763,7 +763,7 @@ footer {
   padding-left: 10px;
 }
 .stack-section__title h4 {
-  border-bottom: #9de2d0 solid 2px;
+  border-bottom: #99E2D0 solid 2px;
 }
 .stack-section__items {
   width: 98%;
@@ -813,9 +813,9 @@ footer {
 .position-button-page__button-page {
   width: 50%;
   text-align: center;
-  background-color: #e371da;
+  background-color: #FF79DA;
   border-radius: 24px;
-  background: linear-gradient(8deg, #8f53db 0%, #e371da 100%, #000 100%);
+  background: linear-gradient(8deg, #9356DC 0%, #FF79DA 100%, #000 100%);
   box-shadow: 5px 5px 5px 0px #e9e9e9;
   color: white;
 }

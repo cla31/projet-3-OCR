@@ -1,10 +1,17 @@
 @use'variables'as *;
-// **********************************************
-// partie fonctionnement: placement et style  chiffre + titre + icone
-@mixin icon-tabs {
+@mixin flex-mid {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+// **********************************************
+// partie fonctionnement: placement et style  chiffre + titre + icone
+@mixin icon-tabs {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flex-mid;
     padding-right: 15px;
     color: $secondary-font;
     &:hover {
@@ -36,9 +43,10 @@
 }
 
 @mixin style-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flex-mid;
     background-color: $primaire;
     color: $background-page;
     // border: teal 2px solid;

@@ -1,10 +1,11 @@
 @use'../utils/index' as *;
 .baseline {
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flex-mid;
     width: 100%;
     // width: 50%;
-    display: flex;
-    align-items: center;
     // border: black solid 1px;
     // background-color: rgb(65, 13, 163);
     // background-color: $baseline;
@@ -12,9 +13,10 @@
     background: linear-gradient(rgb(151, 150, 150), $baseline, $baseline, $baseline, $baseline, $baseline, $baseline);
     // background: linear-gradient(rgb(151, 150, 150)repeat(4, $baseline));
     &__icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flex-mid;
         padding-bottom: 4px;
     }
     &__title {
@@ -66,9 +68,10 @@
 }
 
 .tabs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    @include flex-mid;
     &__stack {
         min-width: 90%;
         padding-bottom: 40px;
@@ -133,9 +136,10 @@
 }
 
 .cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    @include flex-mid;
     // background-color: rgb(255, 238, 0);
     // background-color: rgb(228, 25, 92);
     background-color: $background-bloc;
@@ -146,10 +150,11 @@
         padding-bottom: 50px;
     }
     &__row1 {
-        display: flex;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flex-mid;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         a {
             text-decoration: none;
             color: black;
@@ -161,10 +166,11 @@
         }
     }
     &__row2 {
-        display: flex;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flex-mid;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         a {
             text-decoration: none;
             color: black;

@@ -14,9 +14,10 @@
         }
     }
     &__arrow {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flex-mid;
         width: 10%;
         a {
             text-decoration: none;
@@ -101,9 +102,10 @@
 }
 
 .position-stack {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flex-mid;
     flex-direction: column;
     width: 100%;
     // background-color: hotpink;
@@ -209,9 +211,10 @@
     // version tablette
     @media screen and (min-width: 768px) and (max-width: 992px) {
         width: 70%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flex-mid;
         flex-direction: column;
     }
     // version desktop 

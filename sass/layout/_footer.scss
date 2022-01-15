@@ -13,10 +13,11 @@ footer {
     padding-left: 5%;
     // version tablette
     @media screen and (min-width: 768px) and (max-width: 992px) {
-        display: flex;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        @include flex-mid;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         padding-left: 0;
     }
     // version desktop
@@ -51,9 +52,10 @@ footer {
     justify-content: flex-start;
     // border: royalblue 1px solid;
     &__icon-ustensils {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flex-mid;
         padding-right: 21px;
     }
 }
@@ -65,9 +67,10 @@ footer {
     justify-content: flex-start;
     // border: royalblue 1px solid;
     &__icon-handshake {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flex-mid;
         padding-right: 15px;
     }
 }

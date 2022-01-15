@@ -14,9 +14,6 @@
         }
     }
     &__arrow {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         @include flex-mid;
         width: 10%;
         a {
@@ -102,9 +99,6 @@
 }
 
 .position-stack {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     @include flex-mid;
     flex-direction: column;
     width: 100%;
@@ -211,9 +205,6 @@
     // version tablette
     @media screen and (min-width: 768px) and (max-width: 992px) {
         width: 70%;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         @include flex-mid;
         flex-direction: column;
     }

@@ -1,21 +1,9 @@
 @use'../utils/index' as *;
 .baseline {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     @include flex-mid;
     width: 100%;
-    // width: 50%;
-    // border: black solid 1px;
-    // background-color: rgb(65, 13, 163);
-    // background-color: $baseline;
-    // background: linear-gradient(180deg, #e2e0e0 0%, #fff 90%);
     background: linear-gradient(rgb(151, 150, 150), $baseline, $baseline, $baseline, $baseline, $baseline, $baseline);
-    // background: linear-gradient(rgb(151, 150, 150)repeat(4, $baseline));
     &__icon {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         @include flex-mid;
         padding-bottom: 4px;
     }
@@ -41,12 +29,10 @@
     // background-color: grey;
     &__stack {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
         padding-bottom: 50px;
         text-align: center;
-        // border: black solid 1px;
-        // background-color: plum;
         background-color: $background-bloc;
         // version desktop 
         @media screen and (min-width: 992px) {
@@ -68,9 +54,6 @@
 }
 
 .tabs {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     @include flex-mid;
     &__stack {
         min-width: 90%;
@@ -102,11 +85,6 @@
     &__choice {
         @include title-icon-position;
     }
-    // &__icon-mobile {
-    //     &:hover {
-    //         color: $item
-    //     }
-    // }
     &__un {
         @include style-number;
     }
@@ -136,12 +114,7 @@
 }
 
 .cards {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     @include flex-mid;
-    // background-color: rgb(255, 238, 0);
-    // background-color: rgb(228, 25, 92);
     background-color: $background-bloc;
     &__body {
         // background-color: rgb(187, 161, 186);
@@ -150,9 +123,6 @@
         padding-bottom: 50px;
     }
     &__row1 {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         @include flex-mid;
         flex-direction: column;
         a {
@@ -166,9 +136,6 @@
         }
     }
     &__row2 {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         @include flex-mid;
         flex-direction: column;
         a {

@@ -8,9 +8,6 @@
 // **********************************************
 // partie fonctionnement: placement et style  chiffre + titre + icone
 @mixin icon-tabs {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     @include flex-mid;
     padding-right: 15px;
     color: $secondary-font;
@@ -43,9 +40,6 @@
 }
 
 @mixin style-number {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     @include flex-mid;
     background-color: $primaire;
     color: $background-page;

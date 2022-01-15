@@ -5,6 +5,21 @@
     align-items: center;
 }
 
+// typographie
+@mixin Shrikland {
+    font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+@mixin Roboto {
+    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+@mixin items-contact($weight) {
+    @include Roboto;
+    font-weight: $weight;
+}
+
+//composants
 @mixin button {
     text-align: center;
     font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;

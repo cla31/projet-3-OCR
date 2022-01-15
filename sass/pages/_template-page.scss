@@ -227,17 +227,6 @@
     height: 100px;
     &--button-page {
         width: 50%;
-        // text-align: center;
-        // border: mediumorchid 2px solid;
-        // background-color: $secondaire;
-        // border-radius: 24px;
-        // background: linear-gradient(8deg, $primaire 0%, $secondaire 100%, #000 100%);
-        // box-shadow: 5px 5px 5px 0px $shadow;
-        // color: white;
-        // &:hover {
-        //     cursor: pointer;
-        //     transform: scale(1.1);
-        // }
         // version tablette
         @media screen and (min-width: 768px) and (max-width: 992px) {
             width: 30%;

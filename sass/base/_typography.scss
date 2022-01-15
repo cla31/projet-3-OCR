@@ -2,7 +2,8 @@
 .sidebar {
     &__logo {
         text-align: center;
-        font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
+        // font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
+        @include Shrikland;
         // version tablette
         @media screen and (min-width: 768px) and (max-width: 992px) {
             font-size: 30px;
@@ -15,13 +16,15 @@
 }
 
 .baseline {
-    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    // font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    @include Roboto;
 }
 
 // page note enchantée
 .stack {
     &__title h2 {
-        font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
+        // font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
+        @include Shrikland;
         font-size: 19px;
         // version tablette
         @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -35,7 +38,8 @@
 }
 
 .stack-section {
-    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    // font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    @include Roboto;
     &__title h4 {
         font-weight: 100;
     }
@@ -52,18 +56,14 @@
     }
 }
 
-// .position-button-page {
-//     font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
-//     font-size: 14px;
-//     font-weight: 500;
-// }
 // Main page d'accueil
 .main-home h2 {
     font-size: 20px;
 }
 
 .hero {
-    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    // font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    @include Roboto;
     &__text {
         font-weight: 100;
     }
@@ -74,7 +74,8 @@
 }
 
 .tabs {
-    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    // font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    @include Roboto;
     &__items {
         font-size: 12px;
         // version desktop
@@ -85,7 +86,8 @@
 }
 
 .cards {
-    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    // font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    @include Roboto;
 }
 
 .card {
@@ -104,7 +106,8 @@
 // Footer
 .footer {
     &__title {
-        font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
+        // font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
+        @include Shrikland;
     }
     p {
         margin: 2px;
@@ -112,16 +115,19 @@
 }
 
 .proposal {
-    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
-    font-weight: 500;
+    // font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    // font-weight: 500;
+    @include items-contact(500);
 }
 
 .partner {
-    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
-    font-weight: 500;
+    // font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    // font-weight: 500;
+    @include items-contact(500);
 }
 
 .link {
-    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
-    font-weight: 400;
+    // font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    // font-weight: 400;
+    @include items-contact(400);
 }

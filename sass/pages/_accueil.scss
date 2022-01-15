@@ -41,15 +41,15 @@
     }
     &__button {
         width: 200px;
-        background-color: $secondaire;
-        border-radius: 24px;
-        background: linear-gradient(8deg, $primaire 0%, $secondaire 100%, #000 100%);
-        box-shadow: 5px 5px 5px 0px $shadow;
-        // border: black solid 1px;
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-        }
+        // background-color: $secondaire;
+        // border-radius: 24px;
+        // background: linear-gradient(8deg, $primaire 0%, $secondaire 100%, #000 100%);
+        // box-shadow: 5px 5px 5px 0px $shadow;
+        // // border: black solid 1px;
+        // &:hover {
+        //     cursor: pointer;
+        //     transform: scale(1.1);
+        // }
     }
 }
 

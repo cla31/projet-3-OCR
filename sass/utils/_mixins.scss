@@ -5,6 +5,22 @@
     align-items: center;
 }
 
+@mixin button {
+    text-align: center;
+    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $secondaire;
+    border-radius: 24px;
+    background: linear-gradient(8deg, $primaire 0%, $secondaire 100%, #000 100%);
+    box-shadow: 5px 5px 5px 0px $shadow;
+    color: $background-page;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
 // **********************************************
 // partie fonctionnement: placement et style  chiffre + titre + icone
 @mixin icon-tabs {

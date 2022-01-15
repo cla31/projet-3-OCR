@@ -1,0 +1,4 @@
+@use'../utils/index' as *;
+.button {
+    @include button;
+}

@@ -31,9 +31,10 @@ footer {
     &__items {
         // version desktop
         @media screen and (min-width: 992px) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+            @include flex-j-c(space-between)
         }
     }
     // version desktop
@@ -44,9 +45,10 @@ footer {
 
 .proposal {
     width: 216px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-start;
+    @include flex-j-c(flex-start);
     // border: royalblue 1px solid;
     &__icon-ustensils {
         @include flex-mid;
@@ -56,9 +58,10 @@ footer {
 
 .partner {
     width: 216px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-start;
+    @include flex-j-c(flex-start);
     // border: royalblue 1px solid;
     &__icon-handshake {
         @include flex-mid;

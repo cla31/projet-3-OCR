@@ -5,6 +5,18 @@
     align-items: center;
 }
 
+@mixin center-column($align) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+}
+
+@mixin flex-j-c($j-c) {
+    display: flex;
+    justify-content: $j-c;
+    align-items: center;
+}
+
 // typographie
 @mixin Shrikland {
     font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
@@ -22,7 +34,7 @@
 //composants
 @mixin button {
     text-align: center;
-    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+    @include Roboto();
     font-size: 14px;
     font-weight: 500;
     background-color: $secondaire;
@@ -30,6 +42,26 @@
     background: linear-gradient(8deg, $primaire 0%, $secondaire 100%, #000 100%);
     box-shadow: 5px 5px 5px 0px $shadow;
     color: $background-page;
+    @include hover-scale;
+}
+
+@mixin input {
+    width: 150px;
+    border: none;
+    // background: linear-gradient(rgb(151, 150, 150), $baseline, $baseline, $baseline, $baseline, $baseline, $baseline);
+    background: linear-gradient(darken($baseline, 40%), $baseline, $baseline, $baseline, $baseline, $baseline, $baseline);
+    text-align: center;
+    &:hover {
+        border: darken($baseline, 40%) solid 2px;
+        border-radius: 10px;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+//Effets
+@mixin hover-scale {
     &:hover {
         cursor: pointer;
         transform: scale(1.1);
@@ -90,10 +122,17 @@
 }
 
 // ******************************************************
+// Gestion media-queries
 @mixin items-responsive {
     @media screen and (min-width: 992px) {
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
+}
+
+@mixin m-q-cards {
+    width: 400px;
+    height: 280px;
+    margin: 30px;
 }

@@ -2,7 +2,8 @@
 .baseline {
     @include flex-mid;
     width: 100%;
-    background: linear-gradient(darken($baseline, 40%), $baseline-gradient);
+    height: 50px;
+    background: linear-gradient(darken($baseline, 5%), $baseline-gradient);
     &__icon {
         @include flex-mid;
         padding-bottom: 4px;
@@ -57,51 +58,13 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-        // &:hover>.tabs__icon-mobile>.fas {
-        //     color: $primaire;
-        // }
     }
-    // &__choice>&__icon-mobile:hover {
-    //     background-color: $hover-item;
-    // }
     &__number {
         @include style-number;
     }
     &__icon-item {
         @include icon-tabs;
     }
-    // &__un {
-    //     @include style-number;
-    // }
-    // &__icon-mobile {
-    //     @include icon-tabs;
-    // }
-    // &__compose {
-    //     @include title-icon-position;
-    //     margin-top: 10px;
-    //     margin-bottom: 10px;
-    //     // &:hover>.tabs__icon-list>.fas {
-    //     //     color: $primaire;
-    //     // }
-    // }
-    // &__deux {
-    //     @include style-number;
-    // }
-    // &__icon-list {
-    //     @include icon-tabs;
-    // }
-    // &__enjoy {
-    //     @include title-icon-position;
-    //     // &:hover>.tabs__icon-store>.fas {
-    //     //     color: $primaire;
-    //     // }
-    // }
-    // &__trois {
-    //     @include style-number;
-    // }
-    // &__icon-store {
-    //     @include icon-tabs;
-    // }
 }
 
 .cards {

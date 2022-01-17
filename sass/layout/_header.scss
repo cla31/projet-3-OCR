@@ -3,5 +3,9 @@
     &__logo {
         // background-color: red;
         background-color: $background-page;
+        h1 {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
     }
 }

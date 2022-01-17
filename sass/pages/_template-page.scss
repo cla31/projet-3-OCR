@@ -102,12 +102,11 @@
     @include flex-mid;
     flex-direction: column;
     width: 100%;
-    // background-color: hotpink;
+    // border: 5px solid pink;
     background-color: $background-bloc;
     position: relative;
     object-position: 50% 50%;
     border-radius: 40px 40px 0 0;
-    @include hover-scale;
     // version desktop 
     @include desktop-only {
         height: 400px;
@@ -132,6 +131,7 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "title heart";
+    width: 96%;
     &__title {
         grid-area: title;
         padding-left: 10px;
@@ -139,7 +139,7 @@
         // background-color: brown;
         // version desktop 
         @include desktop-only {
-            padding-left: 35px;
+            padding-left: 43px;
         }
     }
     &__action {
@@ -158,7 +158,7 @@
         }
         // version desktop 
         @include desktop-only {
-            padding-right: 34px;
+            padding-right: 35px;
             font-size: 28px;
             padding-bottom: 0px;
         }
@@ -189,9 +189,21 @@
         justify-content: space-between;
         // border: lightslategray 2px solid;
     }
+    &__item1 {
+        border: 1px solid black;
+        // overflow: auto;
+        // ou rajouter balise <br> ds le html si jamais le texte est plus long que son contenant.
+        width: 88%;
+        min-width: 235px;
+        max-width: 610px;
+    }
+    &__item2 {
+        border: 1px solid black;
+        width: 27px;
+    }
     // version tablette
     @include tablette-only {
-        min-width: 50%;
+        min-width: 80%;
     }
     // version desktop 
     @include desktop-only {
@@ -200,9 +212,10 @@
 }
 
 .place-stack-section {
+    width: 96%;
     // version tablette
     @include tablette-only {
-        width: 70%;
+        width: 100%;
         @include flex-mid;
         flex-direction: column;
     }

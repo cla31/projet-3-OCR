@@ -5,11 +5,13 @@
         @include Shrikland;
         // version tablette
         @include tablette-only {
-            font-size: 30px;
+            // font-size: 24px;
+            font-size: 19px;
         }
         // version desktop 
         @include desktop-only {
-            font-size: 50px;
+            // font-size: 28px;
+            font-size: 21px;
         }
     }
 }

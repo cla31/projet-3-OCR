@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: linear-gradient(#848484, #eaeaea, #eaeaea, #eaeaea, #eaeaea, #eaeaea, #eaeaea);
+  height: 50px;
+  background: linear-gradient(#dddddd, #eaeaea, #eaeaea, #eaeaea);
 }
 .baseline__icon {
   display: flex;
@@ -341,10 +342,6 @@
   object-position: 50% 50%;
   border-radius: 40px 40px 0 0;
 }
-.position-stack:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
 @media screen and (min-width: 992px) {
   .position-stack {
     height: 400px;
@@ -368,6 +365,7 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "title heart";
+  width: 96%;
 }
 .stack__title {
   grid-area: title;
@@ -376,7 +374,7 @@
 }
 @media screen and (min-width: 992px) {
   .stack__title {
-    padding-left: 35px;
+    padding-left: 43px;
   }
 }
 .stack__action {
@@ -396,7 +394,7 @@
 }
 @media screen and (min-width: 992px) {
   .stack__action {
-    padding-right: 34px;
+    padding-right: 35px;
     font-size: 28px;
     padding-bottom: 0px;
   }
@@ -426,9 +424,19 @@
   display: flex;
   justify-content: space-between;
 }
+.stack-section__item1 {
+  border: 1px solid black;
+  width: 88%;
+  min-width: 235px;
+  max-width: 610px;
+}
+.stack-section__item2 {
+  border: 1px solid black;
+  width: 27px;
+}
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .stack-section {
-    min-width: 50%;
+    min-width: 80%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -437,9 +445,12 @@
   }
 }
 
+.place-stack-section {
+  width: 96%;
+}
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .place-stack-section {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -479,6 +490,10 @@
 
 .sidebar__logo {
   background-color: white;
+}
+.sidebar__logo h1 {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 @media screen and (min-width: 992px) {
@@ -575,8 +590,9 @@
 
 input {
   width: 150px;
+  height: 50px;
   border: none;
-  background: linear-gradient(#848484, #eaeaea, #eaeaea, #eaeaea, #eaeaea, #eaeaea, #eaeaea);
+  background: linear-gradient(#dddddd, #eaeaea, #eaeaea, #eaeaea);
   text-align: center;
 }
 input:hover {
@@ -621,12 +637,12 @@ footer {
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .sidebar__logo {
-    font-size: 30px;
+    font-size: 19px;
   }
 }
 @media screen and (min-width: 992px) {
   .sidebar__logo {
-    font-size: 50px;
+    font-size: 21px;
   }
 }
 

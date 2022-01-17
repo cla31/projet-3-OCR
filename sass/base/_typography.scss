@@ -4,11 +4,17 @@
         text-align: center;
         @include Shrikland;
         // version tablette
-        @media screen and (min-width: 768px) and (max-width: 992px) {
+        // @media screen and (min-width: 768px) and (max-width: 992px) {
+        //     font-size: 30px;
+        // }
+        @include tablette-only {
             font-size: 30px;
         }
         // version desktop 
-        @media screen and (min-width: 992px) {
+        // @media screen and (min-width: 992px) {
+        //     font-size: 50px;
+        // }
+        @include desktop-only {
             font-size: 50px;
         }
     }
@@ -24,11 +30,17 @@
         @include Shrikland;
         font-size: 19px;
         // version tablette
-        @media screen and (min-width: 768px) and (max-width: 992px) {
+        // @media screen and (min-width: 768px) and (max-width: 992px) {
+        //     font-size: 24px;
+        // }
+        @include tablette-only {
             font-size: 24px;
         }
         // version desktop 
-        @media screen and (min-width: 992px) {
+        // @media screen and (min-width: 992px) {
+        //     font-size: 28px;
+        // }
+        @include desktop-only {
             font-size: 28px;
         }
     }
@@ -73,7 +85,10 @@
     &__items {
         font-size: 12px;
         // version desktop
-        @media screen and (min-width: 992px) {
+        // @media screen and (min-width: 992px) {
+        //     font-size: 16px;
+        // }
+        @include desktop-only {
             font-size: 16px;
         }
     }

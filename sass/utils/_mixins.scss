@@ -1,12 +1,84 @@
-// **********************************************
-// partie fonctionnement: placement et style  chiffre + titre + icone
-@mixin icon-tabs {
+@use'variables'as *;
+@use'map-list'as *;
+@mixin flex-mid {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin center-column($align) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+}
+
+@mixin flex-j-c($j-c) {
+    display: flex;
+    justify-content: $j-c;
+    align-items: center;
+}
+
+// typographie
+@mixin Shrikland {
+    font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+@mixin Roboto {
+    font-family: Roboto, "Arial Black", Arial, Verdana, sans-serif;
+}
+
+@mixin items-contact($weight) {
+    @include Roboto;
+    font-weight: $weight;
+}
+
+//composants
+@mixin button {
+    text-align: center;
+    @include Roboto();
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $secondaire;
+    border-radius: 24px;
+    background: linear-gradient(8deg, $primaire 0%, $secondaire 100%, #000 100%);
+    box-shadow: $box-shadow;
+    color: $background-page;
+    @include hover-scale;
+}
+
+@mixin input {
+    width: 150px;
+    height: 50px;
+    border: none;
+    background: linear-gradient(darken($baseline, 5%), $baseline-gradient);
+    text-align: center;
+    &:hover {
+        border: darken($baseline, 40%) solid 2px;
+        border-radius: 10px;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+//Effets
+@mixin hover-scale {
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+// **********************************************
+// partie fonctionnement: placement et style  chiffre + titre + icone
+@mixin icon-tabs {
+    @include flex-mid;
     padding-right: 15px;
     color: $secondary-font;
-    &:hover {
+}
+
+@mixin change-state {
+    &:hover>.tabs__icon-item>.fas {
         color: $primaire;
     }
 }
@@ -20,24 +92,22 @@
     padding-left: 20px;
     background-color: $background-bloc;
     border-radius: 10px;
-    // box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 5px 5px 5px 0px $shadow;
+    box-shadow: $box-shadow;
     // border: royalblue 1px solid;
     &:hover {
         cursor: pointer;
         transform: scale(1.1);
         background-color: $hover-item;
     }
+    @include change-state;
     // version desktop
-    @media screen and (min-width: 992px) {
+    @include desktop-only {
         width: 270px;
     }
 }
 
 @mixin style-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-mid;
     background-color: $primaire;
     color: $background-page;
     // border: teal 2px solid;
@@ -47,7 +117,7 @@
     right: 205px;
     border-radius: 12px;
     // version desktop
-    @media screen and (min-width: 992px) {
+    @include desktop-only {
         right: 265px;
         font-size: 18px;
         width: 25px;
@@ -56,10 +126,29 @@
 }
 
 // ******************************************************
+// Gestion media-queries
+@mixin tablette-only {
+    @media screen and (min-width: map-get($breakpoints, tablette)) and (max-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
 @mixin items-responsive {
     @media screen and (min-width: 992px) {
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
+}
+
+@mixin m-q-cards {
+    width: 400px;
+    height: 280px;
+    margin: 30px;
 }

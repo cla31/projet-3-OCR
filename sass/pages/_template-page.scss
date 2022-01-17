@@ -4,18 +4,11 @@
         display: flex;
         width: 100%;
         // version tablette
-        // @media screen and (min-width: 768px) and (max-width: 992px) {
-        //     display: flex;
-        //     flex-direction: row;
-        // }
         @include tablette-only {
             display: flex;
             flex-direction: row;
         }
         // version desktop
-        // @media screen and (min-width: 992px) {
-        //     flex-direction: row;
-        // }
         @include desktop-only {
             flex-direction: row;
         }
@@ -28,16 +21,10 @@
             color: black;
         }
         // version tablette
-        // @media screen and (min-width: 768px) and (max-width: 992px) {
-        //     width: 5%;
-        // }
         @include tablette-only {
             width: 5%;
         }
         // version desktop
-        // @media screen and (min-width: 992px) {
-        //     width: 4%;
-        // }
         @include desktop-only {
             width: 4%;
         }
@@ -48,16 +35,10 @@
         // border: black 1px solid;
         width: 90%;
         // version tablette
-        // @media screen and (min-width: 768px) and (max-width: 992px) {
-        //     width: 95%;
-        // }
         @include tablette-only {
             width: 95%;
         }
         // version desktop
-        // @media screen and (min-width: 992px) {
-        //     width: 96%;
-        // }
         @include desktop-only {
             width: 96%;
         }
@@ -66,10 +47,6 @@
         // background-color: hotpink;
         h1 {
             // version desktop
-            // @media screen and (min-width: 992px) {
-            //     margin-top: 20px;
-            //     padding-right: 100px;
-            // }
             @include desktop-only {
                 margin-top: 20px;
                 padding-right: 100px;
@@ -93,16 +70,10 @@
             height: 260px;
             object-position: center center;
             // version tablette
-            // @media screen and (min-width: 768px) and (max-width: 992px) {
-            //     height: 300px;
-            // }
             @include tablette-only {
                 height: 300px;
             }
             //version desktop 
-            // @media screen and (min-width: 992px) {
-            //     height: 600px;
-            // }
             @include desktop-only {
                 height: 600px;
             }
@@ -110,16 +81,10 @@
                 height: 250px;
                 object-position: center bottom;
                 // version tablette
-                // @media screen and (min-width: 768px) and (max-width: 992px) {
-                //     height: 300px;
-                // }
                 @include tablette-only {
                     height: 300px;
                 }
                 //version desktop 
-                // @media screen and (min-width: 992px) {
-                //     height: 600px;
-                // }
                 @include desktop-only {
                     height: 600px;
                 }
@@ -144,10 +109,6 @@
     border-radius: 40px 40px 0 0;
     @include hover-scale;
     // version desktop 
-    // @media screen and (min-width: 992px) {
-    //     // background-size: cover;
-    //     height: 400px;
-    // }
     @include desktop-only {
         height: 400px;
     }
@@ -177,9 +138,6 @@
         padding-bottom: 20px;
         // background-color: brown;
         // version desktop 
-        // @media screen and (min-width: 992px) {
-        //     padding-left: 35px;
-        // }
         @include desktop-only {
             padding-left: 35px;
         }
@@ -194,20 +152,11 @@
         padding-bottom: 20px;
         // background-color: cadetblue;
         // version tablette
-        // @media screen and (min-width: 768px) and (max-width: 992px) {
-        //     font-size: 24px;
-        //     padding-bottom: 5px;
-        // }
         @include tablette-only {
             font-size: 24px;
             padding-bottom: 5px;
         }
         // version desktop 
-        // @media screen and (min-width: 992px) {
-        //     padding-right: 34px;
-        //     font-size: 28px;
-        //     padding-bottom: 0px;
-        // }
         @include desktop-only {
             padding-right: 34px;
             font-size: 28px;
@@ -215,17 +164,10 @@
         }
     }
     // version tablette
-    // @media screen and (min-width: 768px) and (max-width: 992px) {
-    //     // width: 70%;
-    //     min-width: 90%;
-    // }
     @include tablette-only {
         min-width: 90%;
     }
     // version desktop 
-    // @media screen and (min-width: 992px) {
-    //     min-width: 90%;
-    // }
     @include desktop-only {
         min-width: 90%;
     }
@@ -248,16 +190,10 @@
         // border: lightslategray 2px solid;
     }
     // version tablette
-    // @media screen and (min-width: 768px) and (max-width: 992px) {
-    //     min-width: 50%;
-    // }
     @include tablette-only {
         min-width: 50%;
     }
     // version desktop 
-    // @media screen and (min-width: 992px) {
-    //     min-width: 28%;
-    // }
     @include desktop-only {
         min-width: 28%;
     }
@@ -265,22 +201,12 @@
 
 .place-stack-section {
     // version tablette
-    // @media screen and (min-width: 768px) and (max-width: 992px) {
-    //     width: 70%;
-    //     @include flex-mid;
-    //     flex-direction: column;
-    // }
     @include tablette-only {
         width: 70%;
         @include flex-mid;
         flex-direction: column;
     }
     // version desktop 
-    // @media screen and (min-width: 992px) {
-    //     display: flex;
-    //     justify-content: space-around;
-    //     min-width: 90%;
-    // }
     @include desktop-only {
         display: flex;
         justify-content: space-around;
@@ -300,16 +226,10 @@
     &--button-page {
         width: 50%;
         // version tablette
-        // @media screen and (min-width: 768px) and (max-width: 992px) {
-        //     width: 30%;
-        // }
         @include tablette-only {
             width: 30%;
         }
         // version desktop 
-        // @media screen and (min-width: 992px) {
-        //     width: 20%;
-        // }
         @include desktop-only {
             width: 20%;
         }

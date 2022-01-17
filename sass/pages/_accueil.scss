@@ -17,9 +17,6 @@
         text-align: center;
         background-color: $background-bloc;
         // version desktop 
-        // @media screen and (min-width: 992px) {
-        //     padding-top: 30px;
-        // }
         @include desktop-only {
             padding-top: 30px;
         }
@@ -35,19 +32,14 @@
         min-width: 90%;
         padding-bottom: 40px;
         // version tablette
-        // @media screen and (min-width: 768px) and (max-width: 992px) {
-        //     @include center-column(center);
-        // }
         @include tablette-only {
             @include center-column(center);
         }
     }
     &__box {
         border: black 2px solid;
-        // width: 30%;
     }
     &__items {
-        // font-size: 12px;
         padding-left: 18px;
         a {
             text-decoration: none;
@@ -55,42 +47,61 @@
         }
         // version desktop
         @include items-responsive;
-        // @media screen and (min-width: 992px) {
-        //     height: 180px;
-        // }
         @include desktop-only {
             height: 180px;
         }
     }
-    &__choice {
+    &__item {
         @include title-icon-position;
+        &--compose {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        // &:hover>.tabs__icon-mobile>.fas {
+        //     color: $primaire;
+        // }
     }
-    &__un {
+    // &__choice>&__icon-mobile:hover {
+    //     background-color: $hover-item;
+    // }
+    &__number {
         @include style-number;
     }
-    &__icon-mobile {
+    &__icon-item {
         @include icon-tabs;
     }
-    &__compose {
-        @include title-icon-position;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    &__deux {
-        @include style-number;
-    }
-    &__icon-list {
-        @include icon-tabs;
-    }
-    &__enjoy {
-        @include title-icon-position;
-    }
-    &__trois {
-        @include style-number;
-    }
-    &__icon-store {
-        @include icon-tabs;
-    }
+    // &__un {
+    //     @include style-number;
+    // }
+    // &__icon-mobile {
+    //     @include icon-tabs;
+    // }
+    // &__compose {
+    //     @include title-icon-position;
+    //     margin-top: 10px;
+    //     margin-bottom: 10px;
+    //     // &:hover>.tabs__icon-list>.fas {
+    //     //     color: $primaire;
+    //     // }
+    // }
+    // &__deux {
+    //     @include style-number;
+    // }
+    // &__icon-list {
+    //     @include icon-tabs;
+    // }
+    // &__enjoy {
+    //     @include title-icon-position;
+    //     // &:hover>.tabs__icon-store>.fas {
+    //     //     color: $primaire;
+    //     // }
+    // }
+    // &__trois {
+    //     @include style-number;
+    // }
+    // &__icon-store {
+    //     @include icon-tabs;
+    // }
 }
 
 .cards {
@@ -110,10 +121,6 @@
             color: black;
         }
         // version desktop 
-        // @media screen and (min-width: 992px) {
-        //     flex-direction: row;
-        //     padding-bottom: 30px;
-        // }
         @include desktop-only {
             flex-direction: row;
             padding-bottom: 30px;
@@ -127,9 +134,6 @@
             color: black;
         }
         // version desktop 
-        // @media screen and (min-width: 992px) {
-        //     flex-direction: row;
-        // }
         @include desktop-only {
             flex-direction: row;
         }
@@ -147,16 +151,10 @@
     // box-shadow: 5px 5px 5px 0px $shadow;
     box-shadow: $box-shadow;
     // version tablette
-    // @media screen and (min-width: 768px) and (max-width: 992px) {
-    //     @include m-q-cards;
-    // }
     @include tablette-only {
         @include m-q-cards;
     }
     // version desktop 
-    // @media screen and (min-width: 992px) {
-    //     @include m-q-cards;
-    // }
     @include desktop-only {
         @include m-q-cards;
     }

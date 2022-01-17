@@ -18,6 +18,11 @@
     align-items: center;
 }
 
+//conditions
+// @mixin purple-hover {
+//     @if(::hover){
+//     }
+// }
 // typographie
 @mixin Shrikland {
     font-family: Shrikhand, "Arial Black", Arial, Verdana, sans-serif;
@@ -75,7 +80,13 @@
     @include flex-mid;
     padding-right: 15px;
     color: $secondary-font;
-    &:hover {
+    // &:hover {
+    //     color: $primaire;
+    // }
+}
+
+@mixin change-state {
+    &:hover>.tabs__icon-item>.fas {
         color: $primaire;
     }
 }
@@ -98,6 +109,10 @@
         transform: scale(1.1);
         background-color: $hover-item;
     }
+    @include change-state;
+    // &:hover>.tabs__icon-mobile>.fas {
+    //     color: yellow;
+    // }
     // version desktop
     @include desktop-only {
         width: 270px;

@@ -441,6 +441,10 @@
   object-position: 50% 50%;
   border-radius: 40px 40px 0 0;
 }
+.position-stack:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
 @media screen and (min-width: 992px) {
   .position-stack {
     height: 400px;

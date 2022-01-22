@@ -1,8 +1,4 @@
 @use'../utils/index' as *;
-// $background:rgb(234, 234, 234);
-// body {
-//     background: $background;
-// }
 @mixin flex-mid {
     display: flex;
     justify-content: center;
@@ -12,19 +8,16 @@
 .loading-spinner {
     @include flex-mid;
     flex-direction: column;
-    // margin-top: 30vh;
-    // width: 400px;
-    // height: 250px;
     // border: 1px solid black;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 20;
     visibility: hidden;
     background: $baseline;
-    animation: spinner-animation 5s linear;
+    animation: spinner-animation 2s linear;
 }
 
 @keyframes spinner-animation {
@@ -45,8 +38,6 @@
 .tchin-animation {
     @include flex-mid;
     margin: 0px auto 0px auto;
-    // width: 400px;
-    // height: 250px;
     // border: 1px solid black;
 }
 
@@ -56,7 +47,7 @@ ul {
     padding: 0;
     width: 70px;
     height: 25px;
-    // position: relative;
+    position: relative;
     opacity: 0;
     animation: tchin infinite linear 2s;
 }
@@ -110,7 +101,6 @@ li:nth-child(3) {
 //les verres
 .glasses-animation {
     @include flex-mid;
-    // margin: 1px auto auto auto;
     width: 55%;
     min-width: 300px;
     max-width: 400px;
@@ -122,15 +112,10 @@ li:nth-child(3) {
     width: 25%;
     height: 80%;
     margin: 40px;
-    // position: relative;
-    // border: 3px solid white;
-    // box-sizing: border-box;
-    // padding-top: 30px;
     &__glass {
         height: 50%;
         width: 100%;
         background: white;
-        // margin: 30px auto;
         clip-path: polygon(0 1%, 100% 0, 95% 100%, 6% 100%);
         border-radius: 50% 50% 0 0;
         transform: rotate(180deg);
@@ -211,9 +196,6 @@ li:nth-child(3) {
 
 .round-dot {
     // border: 2px solid black;
-    // margin: 100px auto 0;
-    // width: 70px;
-    // text-align: center;
     &__dot {
         width: 18px;
         height: 18px;

@@ -40,12 +40,61 @@
     font-weight: 500;
     background-color: $secondaire;
     border-radius: 24px;
-    background: linear-gradient(8deg, $primaire 0%, $secondaire 100%, #000 100%);
+    background: $bg-button;
     box-shadow: $box-shadow;
     color: $background-page;
     @include hover-scale;
+    position: relative;
+    z-index: 1;
+    border: none;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        // Ne pas oublier "content" sinon ne fonctionne pas!!!!!
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // $bg-button:linear-gradient(8deg, $primaire 0%, $secondaire 100%, #000 100%);
+        background: linear-gradient(8deg, lighten($secondaire, 1) 0%, lighten($secondaire, 0.8) 100%, #000 100%);
+        box-shadow: 5px 5px 5px 0px rgb(194, 191, 191);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        border-radius: 2rem;
+    }
 }
 
+// .btn {
+//     position: relative;
+//     z-index: 1;
+//     border: none;
+//     &:hover {
+//         &::after {
+//             opacity: 1;
+//         }
+//     }
+//     &::after {
+//         // Ne pas oublier "content" sinon ne fonctionne pas!!!!!
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         left: 0;
+//         // Pour faire le dégradé:
+//         background: radial-gradient(circle, lighten($btn, 5) 0%, darken($btn, 10) 100%);
+//         opacity: 0;
+//         z-index: -1;
+//         transition: opacity 250ms;
+//         border-radius: 2rem;
+//     }
+// }
 @mixin input {
     width: 150px;
     height: 50px;
@@ -63,10 +112,15 @@
 
 //Effets
 @mixin hover-scale {
+    transform: scale(1);
+    transition: transform 400ms;
     &:hover {
-        cursor: pointer;
         transform: scale(1.1);
     }
+    // &:hover {
+    //     cursor: pointer;
+    //     transform: scale(1.1);
+    // }
 }
 
 // **********************************************

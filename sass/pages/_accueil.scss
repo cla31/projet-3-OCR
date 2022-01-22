@@ -54,6 +54,7 @@
     }
     &__item {
         @include title-icon-position;
+        @include hover-scale;
         &--compose {
             margin-top: 10px;
             margin-bottom: 10px;

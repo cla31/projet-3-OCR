@@ -554,6 +554,40 @@
   }
 }
 
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.slide-up {
+  animation: slide-up 1.3s both;
+}
+
+#effect-1 {
+  animation-delay: 0.05s;
+}
+
+#effect-2 {
+  animation-delay: 0.1s;
+}
+
+#effect-3 {
+  animation-delay: 0.15s;
+}
+
 .sidebar__logo {
   background-color: white;
 }

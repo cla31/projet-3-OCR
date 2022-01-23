@@ -200,14 +200,12 @@
         margin-bottom: 20px;
         position: relative;
         border-radius: 8px 8px 8px 8px;
-        // overflow: hidden;
         &:hover .stack-section__check-box {
             @include flex-mid;
             animation: translate 0.5s ease;
             transform-origin: right;
         }
         &:hover .stack-section__item1 {
-            // overflow: hidden;
             text-overflow: ellipsis;
         }
         &:hover .stack-section__item2 {
@@ -225,21 +223,13 @@
     &__item1 {
         padding-left: 5px;
         // border: 1px solid black;
-        // overflow: auto;
-        // ou rajouter balise <br> ds le html si jamais le texte est plus long que son contenant.
         width: 88%;
-        // min-width: 235px;
-        // max-width: 610px;
         overflow: hidden;
         white-space: nowrap;
-        // width: 250px;
         height: 20px;
-        // word-wrap: break-word;
-        // text-overflow: ellipsis;
     }
     &__item2 {
         // border: 1px solid black;
-        // width: 27px;
         padding-right: 4px;
     }
     // version tablette
@@ -325,4 +315,39 @@
             width: 20%;
         }
     }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    animation: slide-up 1.3s both;
+}
+
+#effect-1 {
+    animation-delay: 0.05s;
+}
+
+#effect-2 {
+    animation-delay: 0.10s;
+}
+
+#effect-3 {
+    animation-delay: 0.15s;
 }

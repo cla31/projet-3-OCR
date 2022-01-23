@@ -948,6 +948,11 @@ li:nth-child(3) {
   opacity: 0;
 }
 
+.animation-heart-page-menu {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
 * {
   box-sizing: border-box;
 }

@@ -95,7 +95,8 @@
 
 .container-stack {
     // background-color: rgb(173, 156, 165);
-    background-color: $background-bloc;
+    // background-color: $background-bloc;
+    background-color: rgb(240, 240, 240);
 }
 
 .position-stack {
@@ -103,7 +104,8 @@
     flex-direction: column;
     width: 100%;
     // border: 5px solid pink;
-    background-color: $background-bloc;
+    // background-color: $background-bloc;
+    background-color: rgb(240, 240, 240);
     position: relative;
     object-position: 50% 50%;
     border-radius: 40px 40px 0 0;
@@ -181,9 +183,19 @@
     }
     &__items {
         width: 98%;
-        // border: red 2px solid;
+        border: red 2px solid;
+        background-color: $background-page;
         margin-bottom: 20px;
+        position: relative;
+        &:hover .stack-section__check-box {
+            @include flex-mid;
+            animation: translate-icon 0.5s ease;
+            transform-origin: right;
+        }
     }
+    // &__content-items {
+    //     position: absolute;
+    // }
     &__description {
         display: flex;
         justify-content: space-between;
@@ -209,9 +221,50 @@
     @include desktop-only {
         min-width: 28%;
     }
+    // &__check {
+    //     border: 2px solid rgb(129, 17, 194);
+    //     position: relative;
+    //     height: 30px;
+    //     padding-bottom: 20px;
+    // }
+    &__check-box {
+        display: none;
+        position: absolute;
+        background: $tertiaire;
+        // border-radius: 0 15px 15px 0;
+        top: 0px;
+        right: 0px;
+        padding: 0 13px;
+        height: 100%;
+        i {
+            font-size: 30px;
+            color: white;
+            transform: rotate(180deg);
+            animation: rotate-icon 0.5s both;
+        }
+    }
+}
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes translate-icon {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(-50px);
+    }
 }
 
 .place-stack-section {
+    background-color: rgb(240, 240, 240);
     width: 96%;
     // version tablette
     @include tablette-only {
@@ -230,7 +283,8 @@
 .position-button-page {
     width: 100%;
     // background-color: hotpink;
-    background-color: $background-bloc;
+    // background-color: $background-bloc;
+    background-color: rgb(240, 240, 240);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

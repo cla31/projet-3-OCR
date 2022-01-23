@@ -234,8 +234,6 @@
   justify-content: flex-end;
   align-items: center;
   height: 67px;
-  padding-right: 15px;
-  padding-bottom: 10px;
 }
 
 .sidebar__logo--page {
@@ -824,6 +822,68 @@ li:nth-child(3) {
 }
 .round-dot__dot--dot2 {
   animation-delay: -0.16s;
+}
+
+.animation-heart {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.animation-heart .heart-css {
+  position: absolute;
+  z-index: 0;
+  width: 45px;
+  height: 35px;
+  opacity: 0;
+  transition: opacity 300ms;
+  top: 10px;
+}
+.animation-heart #heart {
+  position: relative;
+  width: 90%;
+  height: 83.3%;
+}
+.animation-heart #heart::before,
+.animation-heart #heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 42%;
+  height: 90%;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(8deg, #9356DC 0%, #FF79DA 100%, #000 100%);
+}
+.animation-heart #heart::before {
+  left: 42%;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  background: linear-gradient(8deg, #9356DC 50%, #FF79DA 100%, #000 100%);
+}
+.animation-heart #heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+.animation-heart .far {
+  position: absolute;
+  z-index: 1;
+  font-size: 25px;
+  left: 8%;
+  opacity: 1;
+  transition: opacity 300ms;
+  top: 10px;
+}
+.animation-heart:hover .heart-css {
+  opacity: 1;
+}
+.animation-heart:hover .far {
+  opacity: 0;
+}
+.animation-heart:active .heart-css {
+  opacity: 1;
+}
+.animation-heart:active .far {
+  opacity: 0;
 }
 
 * {

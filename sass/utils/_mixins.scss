@@ -53,7 +53,6 @@
         }
     }
     &::after {
-        // Ne pas oublier "content" sinon ne fonctionne pas!!!!!
         content: "";
         position: absolute;
         top: 0;
@@ -70,31 +69,6 @@
     }
 }
 
-// .btn {
-//     position: relative;
-//     z-index: 1;
-//     border: none;
-//     &:hover {
-//         &::after {
-//             opacity: 1;
-//         }
-//     }
-//     &::after {
-//         // Ne pas oublier "content" sinon ne fonctionne pas!!!!!
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         right: 0;
-//         bottom: 0;
-//         left: 0;
-//         // Pour faire le dégradé:
-//         background: radial-gradient(circle, lighten($btn, 5) 0%, darken($btn, 10) 100%);
-//         opacity: 0;
-//         z-index: -1;
-//         transition: opacity 250ms;
-//         border-radius: 2rem;
-//     }
-// }
 @mixin input {
     width: 150px;
     height: 50px;
@@ -117,10 +91,6 @@
     &:hover {
         transform: scale(1.1);
     }
-    // &:hover {
-    //     cursor: pointer;
-    //     transform: scale(1.1);
-    // }
 }
 
 // **********************************************

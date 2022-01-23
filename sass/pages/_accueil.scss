@@ -1,165 +1,235 @@
-@use'../utils/index' as *;
-.baseline {
-    @include flex-mid;
-    width: 100%;
-    height: 50px;
-    background: linear-gradient(darken($baseline, 5%), $baseline-gradient);
-    &__icon {
+    @use'../utils/index' as *;
+    .baseline {
         @include flex-mid;
-        padding-bottom: 4px;
-    }
-}
-
-.hero {
-    // background-color: grey;
-    &__stack {
-        @include center-column(center);
-        padding-bottom: 50px;
-        text-align: center;
-        background-color: $background-bloc;
-        // version desktop 
-        @include desktop-only {
-            padding-top: 30px;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(darken($baseline, 5%), $baseline-gradient);
+        &__icon {
+            @include flex-mid;
+            padding-bottom: 4px;
         }
     }
-    &__button {
-        width: 200px;
+    
+    .hero {
+        // background-color: grey;
+        &__stack {
+            @include center-column(center);
+            padding-bottom: 50px;
+            text-align: center;
+            background-color: $background-bloc;
+            // version desktop 
+            @include desktop-only {
+                padding-top: 30px;
+            }
+        }
+        &__button {
+            width: 200px;
+        }
     }
-}
-
-.tabs {
-    @include flex-mid;
-    &__stack {
-        min-width: 90%;
-        padding-bottom: 40px;
+    
+    .tabs {
+        @include flex-mid;
+        &__stack {
+            min-width: 90%;
+            padding-bottom: 40px;
+            // version tablette
+            @include tablette-only {
+                @include center-column(center);
+            }
+        }
+        &__box {
+            border: black 2px solid;
+        }
+        &__items {
+            padding-left: 18px;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            // version desktop
+            @include items-responsive;
+            @include desktop-only {
+                height: 180px;
+            }
+        }
+        &__item {
+            @include title-icon-position;
+            @include hover-scale;
+            &--compose {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        &__number {
+            @include style-number;
+        }
+        &__icon-item {
+            @include icon-tabs;
+        }
+    }
+    
+    .cards {
+        @include flex-mid;
+        background-color: $background-bloc;
+        &__body {
+            // background-color: rgb(187, 161, 186);
+            background-color: $background-bloc;
+            min-width: 90%;
+            padding-bottom: 50px;
+        }
+        &__row1 {
+            @include flex-mid;
+            flex-direction: column;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            // version desktop 
+            @include desktop-only {
+                flex-direction: row;
+                padding-bottom: 30px;
+            }
+        }
+        &__row2 {
+            @include flex-mid;
+            flex-direction: column;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            // version desktop 
+            @include desktop-only {
+                flex-direction: row;
+            }
+        }
+    }
+    
+    .card {
+        position: relative;
+        width: 290px;
+        background-color: $background-page;
+        // border: blue 2px solid;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-radius: 24px;
+        // box-shadow: 5px 5px 5px 0px $shadow;
+        box-shadow: $box-shadow;
         // version tablette
         @include tablette-only {
-            @include center-column(center);
+            @include m-q-cards;
         }
-    }
-    &__box {
-        border: black 2px solid;
-    }
-    &__items {
-        padding-left: 18px;
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        // version desktop
-        @include items-responsive;
+        // version desktop 
         @include desktop-only {
-            height: 180px;
+            @include m-q-cards;
         }
-    }
-    &__item {
-        @include title-icon-position;
         @include hover-scale;
-        &--compose {
-            margin-top: 10px;
-            margin-bottom: 10px;
+        &__header {
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 24px 24px 0 0;
+            }
+            &--new {
+                position: relative;
+                // background-color: blue;
+            }
+            &--text-new {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 6px 6px 6px 6px;
+                // color: navy;
+                color: $info-text;
+                background-color: $tertiaire;
+            }
+        }
+        &__body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "titles heart";
+        }
+        &__titles {
+            grid-area: titles;
+            padding-left: 10px;
+            padding-bottom: 20px;
+        }
+        &__action {
+            // border: black solid 2px;
+            grid-area: heart;
+            @include flex-j-c(flex-end);
+            height: 67px;
         }
     }
-    &__number {
-        @include style-number;
-    }
-    &__icon-item {
-        @include icon-tabs;
-    }
-}
-
-.cards {
-    @include flex-mid;
-    background-color: $background-bloc;
-    &__body {
-        // background-color: rgb(187, 161, 186);
-        background-color: $background-bloc;
-        min-width: 90%;
-        padding-bottom: 50px;
-    }
-    &__row1 {
-        @include flex-mid;
-        flex-direction: column;
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        // version desktop 
-        @include desktop-only {
-            flex-direction: row;
-            padding-bottom: 30px;
-        }
-    }
-    &__row2 {
-        @include flex-mid;
-        flex-direction: column;
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        // version desktop 
-        @include desktop-only {
-            flex-direction: row;
-        }
-    }
-}
-
-.card {
-    position: relative;
-    width: 290px;
-    background-color: $background-page;
-    // border: blue 2px solid;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border-radius: 24px;
-    // box-shadow: 5px 5px 5px 0px $shadow;
-    box-shadow: $box-shadow;
-    // version tablette
-    @include tablette-only {
-        @include m-q-cards;
-    }
-    // version desktop 
-    @include desktop-only {
-        @include m-q-cards;
-    }
-    @include hover-scale;
-    &__header {
-        img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 24px 24px 0 0;
-        }
-        &--new {
-            position: relative;
-            // background-color: blue;
-        }
-        &--text-new {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 6px 6px 6px 6px;
-            // color: navy;
-            color: $info-text;
-            background-color: $tertiaire;
-        }
-    }
-    &__body {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "titles heart";
-    }
-    &__titles {
-        grid-area: titles;
-        padding-left: 10px;
-        padding-bottom: 20px;
-    }
-    &__action {
-        grid-area: heart;
-        @include flex-j-c(flex-end);
-        height: 67px;
-        padding-right: 15px;
-        padding-bottom: 10px;
-    }
-}
+    
+    // .animation-heart {
+    //     width: 60px;
+    //     height: 60px;
+    //     // border: black solid 2px;
+    //     position: relative;
+    //     .heart-css {
+    //         // border: rgb(179, 33, 118) solid 2px;
+    //         position: absolute;
+    //         z-index: 0;
+    //         width: 45px;
+    //         height: 35px;
+    //         opacity: 0;
+    //         transition: opacity 300ms;
+    //         top: 10px;
+    //     }
+    //     #heart {
+    //         // border: 1px solid black;
+    //         position: relative;
+    //         width: 90%;
+    //         height: 83.3%;
+    //     }
+    //     #heart::before,
+    //     #heart::after {
+    //         content: "";
+    //         position: absolute;
+    //         top: 0;
+    //         width: 42%;
+    //         height: 90%;
+    //         border-radius: 10px 10px 0 0;
+    //         background: $bg-button;
+    //     }
+    //     #heart::before {
+    //         // border: 1px solid black;
+    //         left: 42%;
+    //         transform: rotate(-45deg);
+    //         transform-origin: 0 100%;
+    //         background: linear-gradient(8deg, $primaire 50%, $secondaire 100%, #000 100%);
+    //     }
+    //     #heart::after {
+    //         // border: 1px solid blue;
+    //         left: 0;
+    //         transform: rotate(45deg);
+    //         transform-origin: 100% 100%;
+    //     }
+    //     .far {
+    //         position: absolute;
+    //         z-index: 1;
+    //         font-size: 25px;
+    //         left: 8%;
+    //         opacity: 1;
+    //         transition: opacity 300ms;
+    //         top: 10px;
+    //     }
+    //     &:hover {
+    //         .heart-css {
+    //             opacity: 1;
+    //         }
+    //         .far {
+    //             opacity: 0;
+    //         }
+    //     }
+    //     &:active {
+    //         .heart-css {
+    //             opacity: 1;
+    //         }
+    //         .far {
+    //             opacity: 0;
+    //         }
+    //     }
+    // }

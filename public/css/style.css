@@ -439,11 +439,11 @@
   border-radius: 8px 8px 8px 8px;
 }
 .stack-section__items:hover .stack-section__check-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: translate 0.5s ease;
-  transform-origin: right;
+  transform: scaleX(1);
+}
+.stack-section__items:hover .stack-section__check-box i {
+  transform: rotate(360deg);
+  animation: rotate-icon 1000ms;
 }
 .stack-section__items:hover .stack-section__item1 {
   text-overflow: ellipsis;
@@ -478,7 +478,6 @@
   }
 }
 .stack-section__check-box {
-  display: none;
   position: absolute;
   background: #99E2D0;
   border-radius: 0px 8px 8px 0px;
@@ -486,12 +485,16 @@
   right: 0px;
   padding: 0 13px;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 900ms ease-in-out;
 }
 .stack-section__check-box i {
   font-size: 30px;
   color: white;
-  transform: rotate(180deg);
-  animation: rotate-icon 0.5s both;
 }
 
 @keyframes rotate-icon {
@@ -500,14 +503,6 @@
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@keyframes translate {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(-50px);
   }
 }
 .place-stack-section {
@@ -554,6 +549,10 @@
   }
 }
 
+.slide-up {
+  animation: slide-up 1.3s both;
+}
+
 @keyframes slide-up {
   0% {
     transform: translateY(100px);
@@ -572,10 +571,6 @@
     opacity: 1;
   }
 }
-.slide-up {
-  animation: slide-up 1.3s both;
-}
-
 #effect-1 {
   animation-delay: 0.05s;
 }
@@ -931,7 +926,7 @@ li:nth-child(3) {
   width: 45px;
   height: 35px;
   opacity: 0;
-  transition: opacity 300ms;
+  transition: opacity 500ms;
   top: 10px;
 }
 .animation-heart #heart {
@@ -966,20 +961,22 @@ li:nth-child(3) {
   font-size: 25px;
   left: 8%;
   opacity: 1;
-  transition: opacity 300ms;
   top: 10px;
-}
-.animation-heart:hover .heart-css {
-  opacity: 1;
-}
-.animation-heart:hover .far {
-  opacity: 0;
+  transition: opacity 800ms;
 }
 .animation-heart:active .heart-css {
   opacity: 1;
 }
 .animation-heart:active .far {
   opacity: 0;
+}
+@media screen and (min-width: 992px) {
+  .animation-heart:hover .heart-css {
+    opacity: 1;
+  }
+  .animation-heart:hover .far {
+    opacity: 0;
+  }
 }
 
 .animation-heart-page-menu {

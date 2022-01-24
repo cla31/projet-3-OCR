@@ -11,7 +11,7 @@
         width: 45px;
         height: 35px;
         opacity: 0;
-        transition: opacity 300ms;
+        transition: opacity 500ms;
         top: 10px;
     }
     #heart {
@@ -29,6 +29,7 @@
         height: 90%;
         border-radius: 10px 10px 0 0;
         background: $bg-button;
+        // transition: opacity 500ms;
     }
     #heart::before {
         // border: 1px solid black;
@@ -49,16 +50,8 @@
         font-size: 25px;
         left: 8%;
         opacity: 1;
-        transition: opacity 300ms;
         top: 10px;
-    }
-    &:hover {
-        .heart-css {
-            opacity: 1;
-        }
-        .far {
-            opacity: 0;
-        }
+        transition: opacity 800ms;
     }
     &:active {
         .heart-css {
@@ -68,6 +61,19 @@
             opacity: 0;
         }
     }
+    // version desktop 
+    @include desktop-only {
+        &:hover {
+            .heart-css {
+                opacity: 1;
+                // animation: appears-heart 3000ms both reverse;
+                // animation-timing-function: ease;
+            }
+            .far {
+                opacity: 0;
+            }
+        }
+    }
 }
 
 .animation-heart-page-menu {
@@ -75,3 +81,12 @@
     margin-top: 10px;
     padding-top: 10px;
 }
+
+// @keyframes appears-heart {
+//     0% {
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }

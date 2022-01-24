@@ -201,14 +201,18 @@
         position: relative;
         border-radius: 8px 8px 8px 8px;
         &:hover .stack-section__check-box {
-            @include flex-mid;
-            animation: translate 0.5s ease;
-            transform-origin: right;
+            transform: scaleX(1);
+            i {
+                transform: rotate(360deg);
+                //pour que la coche ne tourne pas au retour (penser à décommenter la keyframe translate):
+                animation: rotate-icon 1000ms;
+            }
         }
         &:hover .stack-section__item1 {
             text-overflow: ellipsis;
         }
         &:hover .stack-section__item2 {
+            //transition avec le padding-right
             padding-right: 65px;
             transition: 0.5s ease;
             // sans cette propriété, symbole euro va à la ligne
@@ -241,7 +245,6 @@
         min-width: 28%;
     }
     &__check-box {
-        display: none;
         position: absolute;
         background: $tertiaire;
         // border-radius: 0 15px 15px 0;
@@ -250,11 +253,17 @@
         right: 0px;
         padding: 0 13px;
         height: 100%;
+        // ********
+        @include flex-mid;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 900ms ease-in-out;
         i {
             font-size: 30px;
             color: white;
-            transform: rotate(180deg);
-            animation: rotate-icon 0.5s both;
+            //si besoin, transition pour la rotation de la coche (si pas de Keyframe)
+            // transform: rotate(0deg);
+            // transition: transform 500ms ease-in-out;
         }
     }
 }
@@ -265,15 +274,6 @@
     }
     100% {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes translate {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(-50px);
     }
 }
 
@@ -317,6 +317,10 @@
     }
 }
 
+.slide-up {
+    animation: slide-up 1.3s both;
+}
+
 @keyframes slide-up {
     0% {
         transform: translateY(100px);
@@ -334,10 +338,6 @@
     100% {
         opacity: 1;
     }
-}
-
-.slide-up {
-    animation: slide-up 1.3s both;
 }
 
 #effect-1 {

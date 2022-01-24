@@ -19,7 +19,7 @@
   align-items: center;
   padding-bottom: 50px;
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
 }
 @media screen and (min-width: 992px) {
   .hero__stack {
@@ -75,7 +75,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 20px;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 0px #e9e9e9;
   transform: scale(1);
@@ -133,10 +133,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
 }
 .cards__body {
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
   min-width: 90%;
   padding-bottom: 50px;
 }
@@ -296,7 +296,7 @@
 .hero-page__img {
   width: 100%;
   max-width: 2000px;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
   background-size: cover;
   overflow: hidden;
 }

@@ -14,14 +14,14 @@
         transition: opacity 500ms;
         top: 10px;
     }
-    #heart {
+    .heart {
         // border: 1px solid black;
         position: relative;
         width: 90%;
         height: 83.3%;
     }
-    #heart::before,
-    #heart::after {
+    .heart::before,
+    .heart::after {
         content: "";
         position: absolute;
         top: 0;
@@ -31,14 +31,14 @@
         background: $bg-button;
         // transition: opacity 500ms;
     }
-    #heart::before {
+    .heart::before {
         // border: 1px solid black;
         left: 42%;
         transform: rotate(-45deg);
         transform-origin: 0 100%;
         background: linear-gradient(8deg, $primaire 50%, $secondaire 100%, #000 100%);
     }
-    #heart::after {
+    .heart::after {
         // border: 1px solid blue;
         left: 0;
         transform: rotate(45deg);

@@ -950,13 +950,13 @@ li:nth-child(3) {
   transition: opacity 500ms;
   top: 10px;
 }
-.animation-heart #heart {
+.animation-heart .heart {
   position: relative;
   width: 90%;
   height: 83.3%;
 }
-.animation-heart #heart::before,
-.animation-heart #heart::after {
+.animation-heart .heart::before,
+.animation-heart .heart::after {
   content: "";
   position: absolute;
   top: 0;
@@ -965,13 +965,13 @@ li:nth-child(3) {
   border-radius: 10px 10px 0 0;
   background: linear-gradient(8deg, #9356DC 0%, #FF79DA 100%, #000 100%);
 }
-.animation-heart #heart::before {
+.animation-heart .heart::before {
   left: 42%;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
   background: linear-gradient(8deg, #9356DC 50%, #FF79DA 100%, #000 100%);
 }
-.animation-heart #heart::after {
+.animation-heart .heart::after {
   left: 0;
   transform: rotate(45deg);
   transform-origin: 100% 100%;

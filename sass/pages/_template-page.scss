@@ -200,7 +200,7 @@
         margin-bottom: 20px;
         position: relative;
         border-radius: 8px 8px 8px 8px;
-        &:hover .stack-section__check-box {
+        &:active .stack-section__check-box {
             transform: scaleX(1);
             i {
                 transform: rotate(360deg);
@@ -208,16 +208,37 @@
                 animation: rotate-icon 1000ms;
             }
         }
-        &:hover .stack-section__item1 {
+        &:active .stack-section__item1 {
             text-overflow: ellipsis;
         }
-        &:hover .stack-section__item2 {
+        &:active .stack-section__item2 {
             //transition avec le padding-right
             padding-right: 65px;
             // transition: 0.5s ease;
             transition: 1s ease;
             // sans cette propriété, symbole euro va à la ligne
             white-space: nowrap;
+        }
+        @include desktop-only {
+            &:hover .stack-section__check-box {
+                transform: scaleX(1);
+                i {
+                    transform: rotate(360deg);
+                    //pour que la coche ne tourne pas au retour (penser à décommenter la keyframe translate):
+                    animation: rotate-icon 1000ms;
+                }
+            }
+            &:hover .stack-section__item1 {
+                text-overflow: ellipsis;
+            }
+            &:hover .stack-section__item2 {
+                //transition avec le padding-right
+                padding-right: 65px;
+                // transition: 0.5s ease;
+                transition: 1s ease;
+                // sans cette propriété, symbole euro va à la ligne
+                white-space: nowrap;
+            }
         }
     }
     &__description {

@@ -185,7 +185,7 @@
             margin: 4px;
         }
     }
-    #trait_dessous {
+    .trait_dessous {
         border-top: $tertiaire solid 2px;
         width: 40px;
     }
@@ -363,14 +363,18 @@
     }
 }
 
-#effect-1 {
-    animation-delay: 0.05s;
+.effect-1 {
+    animation-delay: 0.5s;
 }
 
-#effect-2 {
-    animation-delay: 0.10s;
+.effect-2 {
+    animation-delay: 1s;
 }
 
-#effect-3 {
-    animation-delay: 0.15s;
+.effect-3 {
+    animation-delay: 1.5s;
+}
+
+.effect-4 {
+    animation-delay: 2s;
 }

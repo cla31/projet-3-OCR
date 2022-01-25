@@ -96,6 +96,7 @@
 .container-stack {
     // background-color: rgb(173, 156, 165);
     background-color: $background-bloc;
+    // background-color: rgb(240, 240, 240);
 }
 
 .position-stack {
@@ -104,6 +105,7 @@
     width: 100%;
     // border: 5px solid pink;
     background-color: $background-bloc;
+    // background-color: rgb(240, 240, 240);
     position: relative;
     object-position: 50% 50%;
     border-radius: 40px 40px 0 0;
@@ -176,13 +178,68 @@
 .stack-section {
     // border: black 1px solid;
     padding-left: 10px;
-    &__title h4 {
-        border-bottom: $tertiaire solid 2px;
+    &__title {
+        margin-bottom: 20px;
+        h4 {
+            // border-bottom: $tertiaire solid 2px;
+            margin: 4px;
+        }
+    }
+    #trait_dessous {
+        border-top: $tertiaire solid 2px;
+        width: 40px;
+    }
+    &__subtitle {
+        padding-top: 4px;
+        padding-left: 5px;
     }
     &__items {
         width: 98%;
         // border: red 2px solid;
+        background-color: $background-page;
         margin-bottom: 20px;
+        position: relative;
+        border-radius: 8px 8px 8px 8px;
+        &:active .stack-section__check-box {
+            transform: scaleX(1);
+            i {
+                transform: rotate(360deg);
+                //pour que la coche ne tourne pas au retour (penser à décommenter la keyframe translate):
+                animation: rotate-icon 1000ms;
+            }
+        }
+        &:active .stack-section__item1 {
+            text-overflow: ellipsis;
+        }
+        &:active .stack-section__item2 {
+            //transition avec le padding-right
+            padding-right: 65px;
+            // transition: 0.5s ease;
+            transition: 1s ease;
+            // sans cette propriété, symbole euro va à la ligne
+            white-space: nowrap;
+        }
+        @include desktop-only {
+            &:hover .stack-section__check-box {
+                transform: scaleX(1);
+                i {
+                    transform: rotate(360deg);
+                    //pour que la coche ne tourne pas au retour (penser à décommenter la keyframe translate):
+                    animation: rotate-icon 1000ms;
+                }
+            }
+            &:hover .stack-section__item1 {
+                text-overflow: ellipsis;
+            }
+            &:hover .stack-section__item2 {
+                //transition avec le padding-right
+                padding-right: 65px;
+                // transition: 0.5s ease;
+                transition: 1s ease;
+                // sans cette propriété, symbole euro va à la ligne
+                white-space: nowrap;
+            }
+        }
     }
     &__description {
         display: flex;
@@ -190,16 +247,16 @@
         // border: lightslategray 2px solid;
     }
     &__item1 {
-        border: 1px solid black;
-        // overflow: auto;
-        // ou rajouter balise <br> ds le html si jamais le texte est plus long que son contenant.
+        padding-left: 5px;
+        // border: 1px solid black;
         width: 88%;
-        min-width: 235px;
-        max-width: 610px;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 20px;
     }
     &__item2 {
-        border: 1px solid black;
-        width: 27px;
+        // border: 1px solid black;
+        padding-right: 4px;
     }
     // version tablette
     @include tablette-only {
@@ -209,9 +266,41 @@
     @include desktop-only {
         min-width: 28%;
     }
+    &__check-box {
+        position: absolute;
+        background: $tertiaire;
+        // border-radius: 0 15px 15px 0;
+        border-radius: 0px 8px 8px 0px;
+        top: 0px;
+        right: 0px;
+        padding: 0 13px;
+        height: 100%;
+        // ********
+        @include flex-mid;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 900ms ease-in-out;
+        i {
+            font-size: 30px;
+            color: white;
+            //si besoin, transition pour la rotation de la coche (si pas de Keyframe)
+            // transform: rotate(0deg);
+            // transition: transform 500ms ease-in-out;
+        }
+    }
+}
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .place-stack-section {
+    background-color: rgb(240, 240, 240);
     width: 96%;
     // version tablette
     @include tablette-only {
@@ -231,6 +320,7 @@
     width: 100%;
     // background-color: hotpink;
     background-color: $background-bloc;
+    // background-color: rgb(240, 240, 240);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -247,4 +337,40 @@
             width: 20%;
         }
     }
+}
+
+.slide-up {
+    // animation: slide-up 1.3s both;
+    animation: slide-up 3s both;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#effect-1 {
+    animation-delay: 0.05s;
+}
+
+#effect-2 {
+    animation-delay: 0.10s;
+}
+
+#effect-3 {
+    animation-delay: 0.15s;
 }

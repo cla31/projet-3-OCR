@@ -1,0 +1,92 @@
+@use'../utils/index' as *;
+.animation-heart {
+    width: 60px;
+    height: 60px;
+    // border: black solid 2px;
+    position: relative;
+    .heart-css {
+        // border: rgb(179, 33, 118) solid 2px;
+        position: absolute;
+        z-index: 0;
+        width: 45px;
+        height: 35px;
+        opacity: 0;
+        transition: opacity 500ms;
+        top: 10px;
+    }
+    #heart {
+        // border: 1px solid black;
+        position: relative;
+        width: 90%;
+        height: 83.3%;
+    }
+    #heart::before,
+    #heart::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 42%;
+        height: 90%;
+        border-radius: 10px 10px 0 0;
+        background: $bg-button;
+        // transition: opacity 500ms;
+    }
+    #heart::before {
+        // border: 1px solid black;
+        left: 42%;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+        background: linear-gradient(8deg, $primaire 50%, $secondaire 100%, #000 100%);
+    }
+    #heart::after {
+        // border: 1px solid blue;
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+    .far {
+        position: absolute;
+        z-index: 1;
+        font-size: 25px;
+        left: 8%;
+        opacity: 1;
+        top: 10px;
+        transition: opacity 800ms;
+    }
+    &:active {
+        .heart-css {
+            opacity: 1;
+        }
+        .far {
+            opacity: 0;
+        }
+    }
+    // version desktop 
+    @include desktop-only {
+        &:hover {
+            .heart-css {
+                opacity: 1;
+                // animation: appears-heart 3000ms both reverse;
+                // animation-timing-function: ease;
+            }
+            .far {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.animation-heart-page-menu {
+    // border: 1px solid blue;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+// @keyframes appears-heart {
+//     0% {
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }

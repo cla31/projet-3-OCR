@@ -749,7 +749,7 @@ input:focus {
   z-index: 20;
   visibility: hidden;
   background: #eaeaea;
-  animation: spinner-animation 2s linear;
+  animation: spinner-animation 3s linear;
 }
 
 @keyframes spinner-animation {

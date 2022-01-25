@@ -214,7 +214,8 @@
         &:hover .stack-section__item2 {
             //transition avec le padding-right
             padding-right: 65px;
-            transition: 0.5s ease;
+            // transition: 0.5s ease;
+            transition: 1s ease;
             // sans cette propriété, symbole euro va à la ligne
             white-space: nowrap;
         }

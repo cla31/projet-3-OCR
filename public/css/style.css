@@ -450,7 +450,7 @@
 }
 .stack-section__items:hover .stack-section__item2 {
   padding-right: 65px;
-  transition: 0.5s ease;
+  transition: 1s ease;
   white-space: nowrap;
 }
 .stack-section__description {

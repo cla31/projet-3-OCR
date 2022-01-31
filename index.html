@@ -19,10 +19,50 @@
     <!-- CSS -->
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/normalize.css">
-    <title>reconstitutionP3</title>
+    <title>Ohmyfood</title>
 </head>
 
+
 <body class="container">
+    <!-- loading-spinner -->
+    <div class="loading-spinner">
+        <div class="tchin-animation">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="glasses-animation">
+            <div class="box box--left">
+                <div class="box__glass">
+                    <div class="box__wine box__wine--left">
+                    </div>
+                </div>
+                <div class="box__rod">
+                </div>
+                <div class="box__base">
+                </div>
+            </div>
+            <div class="box box--right">
+                <div class="box__glass">
+                    <div class="box__wine box__wine--right">
+                    </div>
+                </div>
+                <div class="box__rod">
+                </div>
+                <div class="box__base">
+                </div>
+            </div>
+        </div>
+        <div class="dot-animation">
+            <div class="round-dot">
+                <div class="round-dot__dot round-dot__dot--dot1"></div>
+                <div class="round-dot__dot round-dot__dot--dot2"></div>
+                <div class="round-dot__dot round-dot__dot--dot3"></div>
+            </div>
+        </div>
+    </div>
     <!-- HEADER -->
     <header>
         <div class="sidebar">
@@ -38,7 +78,8 @@
             <i class="fas fa-map-marker-alt"></i>
         </div>
         <div class="baseline__title">
-            <p>Paris, Belleville</p>
+            <input type="text" name="ville" id="ville" placeholder="Paris, Bellevile" size="30" maxlength="10" />
+
         </div>
     </div>
 
@@ -50,7 +91,7 @@
                     <h2>Réservez le menu qui vous convient</h2>
                     <p> Découvrez les restaurants d'exception, séléctionnés par nos soins</p>
                 </div>
-                <div class="hero__button">
+                <div class="hero__button button">
                     <a href="#restaurants">
                         <p>Explorez nos restaurants</p>
                     </a>
@@ -61,27 +102,34 @@
             <div class="tabs__stack">
                 <h2>Fonctionnement</h2>
                 <div class="tabs__items">
-                    <div class="tabs__choice">
-                        <div class="tabs__un">1</div>
-                        <div class="tabs__icon-mobile">
-                            <i class="fas fa-mobile-alt"></i>
+                    <a href="#restaurants">
+                        <div class="tabs__item">
+                            <div class="tabs__number">1</div>
+                            <div class="tabs__icon-item">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <p>Choisissez un restaurant</p>
                         </div>
-                        <p>Choisissez un restaurant</p>
-                    </div>
-                    <div class="tabs__compose">
-                        <div class="tabs__deux">2</div>
-                        <div class="tabs__icon-list">
-                            <i class="fas fa-list"></i>
+                    </a>
+                    <!-- </div> -->
+                    <a href="#restaurants">
+                        <div class="tabs__item tabs__item--compose">
+                            <div class="tabs__number">2</div>
+                            <div class="tabs__icon-item">
+                                <i class="fas fa-list"></i>
+                            </div>
+                            <p>Composez votre menu</p>
                         </div>
-                        <p>Composez votre menu</p>
-                    </div>
-                    <div class="tabs__enjoy">
-                        <div class="tabs__trois">3</div>
-                        <div class="tabs__icon-store">
-                            <i class="fas fa-store"></i>
+                    </a>
+                    <a href="#restaurants">
+                        <div class="tabs__item">
+                            <div class="tabs__number">3</div>
+                            <div class="tabs__icon-item">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <p>Dégustez au restaurant</p>
                         </div>
-                        <p>Dégustez au restaurant</p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -91,29 +139,38 @@
                     <h2>Restaurants</h2>
                 </div>
                 <div class="cards__row1">
-                    <a href="note.html">
-                        <div class="card">
+                    <div class="card">
+                        <a href="./nav-pages-html/palette.html">
                             <div class="card__header card__header--new">
                                 <img class="img" src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du goût">
                                 <div class="card__header--text-new">Nouveau</div>
                             </div>
-                            <div class="card__body">
-                                <div class="card__titles">
-                                    <h3>La palette du goût</h3>
-                                    <p>Ménilmontant</p>
-                                </div>
-                                <div class="card__action">
-                                    <!-- coeur -->
+                        </a>
+                        <div class="card__body">
+                            <div class="card__titles">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <div class="card__action">
+                                <!-- coeur -->
+                                <!-- <i class="far fa-heart"></i> -->
+                                <div class="animation-heart">
+                                    <!--magic-heart -->
+                                    <div class="heart-css">
+                                        <div class="heart"></div>
+                                    </div>
                                     <i class="far fa-heart"></i>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                     <div class="card">
-                        <div class="card__header card__header--new">
-                            <img class="img" src="./public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant la note enchantée">
-                            <div class="card__header--text-new">Nouveau</div>
-                        </div>
+                        <a href="./nav-pages-html/note.html">
+                            <div class="card__header card__header--new">
+                                <img class="img" src="./public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant la note enchantée">
+                                <div class="card__header--text-new">Nouveau</div>
+                            </div>
+                        </a>
                         <div class="card__body">
                             <div class="card__titles">
                                 <h3>La note enchantée</h3>
@@ -121,16 +178,26 @@
                             </div>
                             <div class="card__action">
                                 <!-- coeur -->
-                                <i class="far fa-heart"></i>
+                                <!-- <i class="far fa-heart"></i> -->
+                                <div class="animation-heart">
+                                    <!--magic-heart -->
+                                    <div class="heart-css">
+                                        <div class="heart"></div>
+                                    </div>
+                                    <i class="far fa-heart"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="cards__row2">
                     <div class="card">
-                        <div class="card__header">
-                            <img class="img" src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la française">
-                        </div>
+                        <a href="./nav-pages-html/french.html">
+                            <div class="card__header">
+                                <img class="img" src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la française">
+                            </div>
+                        </a>
                         <div class="card__body">
                             <div class="card__titles">
                                 <h3>A la française</h3>
@@ -138,14 +205,22 @@
                             </div>
                             <div class="card__action">
                                 <!-- coeur -->
-                                <i class="far fa-heart"></i>
+                                <div class="animation-heart">
+                                    <!--magic-heart -->
+                                    <div class="heart-css">
+                                        <div class="heart"></div>
+                                    </div>
+                                    <i class="far fa-heart"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card__header">
-                            <img class="img" src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant le délice des sens ">
-                        </div>
+                        <a href="./nav-pages-html/sens.html">
+                            <div class="card__header">
+                                <img class="img" src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant le délice des sens ">
+                            </div>
+                        </a>
                         <div class="card__body">
                             <div class="card__titles">
                                 <h3>Le délice des sens</h3>
@@ -153,10 +228,18 @@
                             </div>
                             <div class="card__action">
                                 <!-- coeur -->
-                                <i class="far fa-heart"></i>
+                                <!-- <i class="far fa-heart"></i> -->
+                                <div class="animation-heart">
+                                    <!--magic-heart -->
+                                    <div class="heart-css">
+                                        <div class="heart"></div>
+                                    </div>
+                                    <i class="far fa-heart"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -181,12 +264,15 @@
                 <div class="link">
                     <p>Mentions légales</p>
                 </div>
-                <div class="link">
-                    <p>contact</p>
+                <div class="link link--contact">
+                    <a href="mailto:clairerodriguez79@yahoo.fr">
+                        <p>contact</p>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 </body>
+
 
 </html>

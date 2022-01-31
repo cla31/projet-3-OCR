@@ -1,0 +1,383 @@
+@use'../utils/index' as *;
+.sidebar {
+    &__logo--page {
+        display: flex;
+        width: 100%;
+        // version tablette
+        @include tablette-only {
+            display: flex;
+            flex-direction: row;
+        }
+        // version desktop
+        @include desktop-only {
+            flex-direction: row;
+        }
+    }
+    &__arrow {
+        @include flex-mid;
+        width: 10%;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        // version tablette
+        @include tablette-only {
+            width: 5%;
+        }
+        // version desktop
+        @include desktop-only {
+            width: 4%;
+        }
+    }
+    &__place-title-page {
+        display: flex;
+        justify-content: center;
+        // border: black 1px solid;
+        width: 90%;
+        // version tablette
+        @include tablette-only {
+            width: 95%;
+        }
+        // version desktop
+        @include desktop-only {
+            width: 96%;
+        }
+    }
+    &__title-page {
+        // background-color: hotpink;
+        h1 {
+            // version desktop
+            @include desktop-only {
+                margin-top: 20px;
+                padding-right: 100px;
+            }
+        }
+    }
+}
+
+// Main
+.hero-page {
+    &__img {
+        width: 100%;
+        max-width: 2000px;
+        // background-color: mediumorchid;
+        background-color: $background-bloc;
+        background-size: cover;
+        overflow: hidden;
+        .img {
+            width: 100%;
+            object-fit: cover;
+            height: 260px;
+            object-position: center center;
+            // version tablette
+            @include tablette-only {
+                height: 300px;
+            }
+            //version desktop 
+            @include desktop-only {
+                height: 600px;
+            }
+            &--sens {
+                height: 250px;
+                object-position: center bottom;
+                // version tablette
+                @include tablette-only {
+                    height: 300px;
+                }
+                //version desktop 
+                @include desktop-only {
+                    height: 600px;
+                }
+            }
+        }
+    }
+}
+
+.container-stack {
+    // background-color: rgb(173, 156, 165);
+    background-color: $background-bloc;
+    // background-color: rgb(240, 240, 240);
+}
+
+.position-stack {
+    @include flex-mid;
+    flex-direction: column;
+    width: 100%;
+    // border: 5px solid pink;
+    background-color: $background-bloc;
+    // background-color: rgb(240, 240, 240);
+    position: relative;
+    object-position: 50% 50%;
+    border-radius: 40px 40px 0 0;
+    // version desktop 
+    @include desktop-only {
+        height: 400px;
+    }
+    &--palette {
+        top: -35px;
+    }
+    &--note {
+        top: -40px;
+    }
+    &--french {
+        top: -30px;
+    }
+    &--sens {
+        top: -35px;
+    }
+}
+
+.stack {
+    // border: black 1px solid;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "title heart";
+    width: 96%;
+    &__title {
+        grid-area: title;
+        padding-left: 10px;
+        padding-bottom: 20px;
+        // background-color: brown;
+        // version desktop 
+        @include desktop-only {
+            padding-left: 43px;
+        }
+    }
+    &__action {
+        grid-area: heart;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 73px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        // background-color: cadetblue;
+        // version tablette
+        @include tablette-only {
+            font-size: 24px;
+            padding-bottom: 5px;
+        }
+        // version desktop 
+        @include desktop-only {
+            padding-right: 35px;
+            font-size: 28px;
+            padding-bottom: 0px;
+        }
+    }
+    // version tablette
+    @include tablette-only {
+        min-width: 90%;
+    }
+    // version desktop 
+    @include desktop-only {
+        min-width: 90%;
+    }
+}
+
+.stack-section {
+    // border: black 1px solid;
+    padding-left: 10px;
+    &__title {
+        margin-bottom: 20px;
+        h4 {
+            // border-bottom: $tertiaire solid 2px;
+            margin: 4px;
+        }
+    }
+    .trait_dessous {
+        border-top: $tertiaire solid 2px;
+        width: 40px;
+    }
+    &__subtitle {
+        padding-top: 4px;
+        padding-left: 5px;
+    }
+    &__items {
+        width: 98%;
+        // border: red 2px solid;
+        background-color: $background-page;
+        margin-bottom: 20px;
+        position: relative;
+        border-radius: 8px 8px 8px 8px;
+        // ******************************************************************************************************************************************
+        // ******************************************************************************************************************************************
+        &:active .stack-section__check-box {
+            transform: scaleX(1);
+            i {
+                transform: rotate(360deg);
+                //pour que la coche ne tourne pas au retour (penser à décommenter la keyframe translate):
+                animation: rotate-icon 1000ms;
+            }
+        }
+        &:active .stack-section__item1 {
+            text-overflow: ellipsis;
+        }
+        &:active .stack-section__item2 {
+            //transition avec le padding-right
+            padding-right: 65px;
+            // transition: 0.5s ease;
+            transition: 1s ease;
+            // sans cette propriété, symbole euro va à la ligne
+            white-space: nowrap;
+        }
+        @include desktop-only {
+            &:hover .stack-section__check-box {
+                transform: scaleX(1);
+                i {
+                    transform: rotate(360deg);
+                    //pour que la coche ne tourne pas au retour (penser à décommenter la keyframe translate):
+                    animation: rotate-icon 1000ms;
+                }
+            }
+            &:hover .stack-section__item1 {
+                text-overflow: ellipsis;
+            }
+            &:hover .stack-section__item2 {
+                //transition avec le padding-right
+                padding-right: 65px;
+                // transition: 0.5s ease;
+                transition: 1s ease;
+                // sans cette propriété, symbole euro va à la ligne
+                white-space: nowrap;
+            }
+        }
+    }
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        // border: lightslategray 2px solid;
+    }
+    &__item1 {
+        padding-left: 5px;
+        // border: 1px solid black;
+        width: 88%;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 20px;
+    }
+    &__item2 {
+        // border: 1px solid black;
+        padding-right: 4px;
+    }
+    // version tablette
+    @include tablette-only {
+        min-width: 80%;
+    }
+    // version desktop 
+    @include desktop-only {
+        min-width: 28%;
+    }
+    &__check-box {
+        position: absolute;
+        background: $tertiaire;
+        // border-radius: 0 15px 15px 0;
+        border-radius: 0px 8px 8px 0px;
+        top: 0px;
+        right: 0px;
+        padding: 0 13px;
+        height: 100%;
+        // ******************************************************************************************************************************************
+        // ******************************************************************************************************************************************
+        @include flex-mid;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 900ms ease-in-out;
+        i {
+            font-size: 30px;
+            color: white;
+            //si besoin, transition pour la rotation de la coche (si pas de Keyframe)
+            // transform: rotate(0deg);
+            // transition: transform 500ms ease-in-out;
+        }
+    }
+}
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.place-stack-section {
+    background-color: rgb(240, 240, 240);
+    width: 96%;
+    // version tablette
+    @include tablette-only {
+        width: 100%;
+        @include flex-mid;
+        flex-direction: column;
+    }
+    // version desktop 
+    @include desktop-only {
+        display: flex;
+        justify-content: space-around;
+        min-width: 90%;
+    }
+}
+
+.position-button-page {
+    width: 100%;
+    // background-color: hotpink;
+    background-color: $background-bloc;
+    // background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    &--button-page {
+        width: 50%;
+        // version tablette
+        @include tablette-only {
+            width: 30%;
+        }
+        // version desktop 
+        @include desktop-only {
+            width: 20%;
+        }
+    }
+}
+
+.slide-up {
+    // animation: slide-up 1.3s both;
+    animation: slide-up 3s both;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.effect-1 {
+    animation-delay: 0.5s;
+}
+
+.effect-2 {
+    animation-delay: 1s;
+}
+
+.effect-3 {
+    animation-delay: 1.5s;
+}
+
+.effect-4 {
+    animation-delay: 2s;
+}

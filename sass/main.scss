@@ -1,7 +1,5 @@
-@import "./utils/mixins.scss";
-@import "./base/base.scss";
-@import "./base/typography.scss";
-@import "./layout/header.scss";
-@import "./layout/footer.scss";
-@import "./pages/accueil.scss";
-@import "./pages/note.scss";
+@use"utils";
+@use'pages';
+@use'layout';
+@use'components';
+@use'base';

@@ -11,6 +11,7 @@
         width: 45px;
         height: 35px;
         opacity: 0;
+        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         transition: opacity 500ms;
         top: 10px;
     }
@@ -36,13 +37,14 @@
         left: 42%;
         transform: rotate(-45deg);
         transform-origin: 0 100%;
-        background: linear-gradient(8deg, $primaire 50%, $secondaire 100%, #000 100%);
+        // background: linear-gradient(8deg, $primaire 50%, $secondaire 100%, #000 100%);
     }
     .heart::after {
         // border: 1px solid blue;
         left: 0;
         transform: rotate(45deg);
         transform-origin: 100% 100%;
+        // background: linear-gradient(8deg, $primaire 50%, $secondaire 100%, #000 100%);
     }
     .far {
         position: absolute;
@@ -53,6 +55,7 @@
         top: 10px;
         transition: opacity 800ms;
     }
+    // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     &:active {
         .heart-css {
             opacity: 1;
@@ -66,8 +69,6 @@
         &:hover {
             .heart-css {
                 opacity: 1;
-                // animation: appears-heart 3000ms both reverse;
-                // animation-timing-function: ease;
             }
             .far {
                 opacity: 0;
@@ -81,12 +82,3 @@
     margin-top: 10px;
     padding-top: 10px;
 }
-
-// @keyframes appears-heart {
-//     0% {
-//         opacity: 0;
-//     }
-//     100% {
-//         opacity: 1;
-//     }
-// }

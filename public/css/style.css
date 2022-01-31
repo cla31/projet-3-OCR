@@ -969,7 +969,6 @@ li:nth-child(3) {
   left: 42%;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
-  background: linear-gradient(8deg, #9356DC 50%, #FF79DA 100%, #000 100%);
 }
 .animation-heart .heart::after {
   left: 0;

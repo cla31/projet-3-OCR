@@ -35,5 +35,5 @@ Home page          |  Restaurant page
 <br/>
 <br/>
 Loading Spinner overview:<br/>
-![LOADING-SPINNER2](./images/loading-spinner2.png)
+![LOADING-SPINNER2](./loading-spinner2.png)
 

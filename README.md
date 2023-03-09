@@ -34,7 +34,8 @@ Home page          |  Restaurant page
 ![MOBILE-VERSION](./mobile-version1.png) | ![MOBILE-VERSION](./mobile-version2.png)
 <br/>
 <br/>
-Loading Spinner overview:<br/>
+Loading Spinner overview:
+<br/>
 ![LOADING-SPINNER2](./loading-spinner2.png)
 
 

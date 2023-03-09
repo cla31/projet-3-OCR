@@ -37,3 +37,4 @@ Home page          |  Restaurant page
 Loading Spinner overview:<br/>
 ![LOADING-SPINNER2](./loading-spinner2.png)
 
+

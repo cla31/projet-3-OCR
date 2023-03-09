@@ -16,3 +16,21 @@ Nothing to install here, just open the index.html file.
 ##
 To view the page online click  :point_right: [here](https://cla31.github.io/projet-3-OCR/index.html)
 ##
+##
+Application overview  (in desktop version):
+<br/>
+<br/>
+![DESKTOP-VERSION](./desktop-version1.png)
+<br/>
+<br/>
+![DESKTOP-VERSION](./desktop-version2.png)
+<br/>
+<br/>
+Application overview (in mobile version):
+<br/>
+<br/>
+Home page          |  Restaurant page
+:-------------------------:|:-------------------------:
+![MOBILE-VERSION](./mobile-version1.png) | ![MOBILE-VERSION](./mobile-version2.png)
+<br/>
+<br/>

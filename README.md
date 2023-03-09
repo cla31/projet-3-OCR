@@ -35,5 +35,4 @@ Home page          |  Restaurant page
 <br/>
 <br/>
 Loading Spinner overview:<br/>
-
-![LOADING-SPINNER1](./loading-spinner1.png)  ![LOADING-SPINNER2](./loading-spinner2.png)
+![LOADING-SPINNER2](./loading-spinner2.png)
